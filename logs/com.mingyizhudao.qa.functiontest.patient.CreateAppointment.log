@@ -1,0 +1,116 @@
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+[INFO] //    TestAPI START:	CreateAppointment
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_01_创建预约单保存
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/edge-gateway/appointment/api/v1/orders
+[INFO] 请求数据: >>>>>  {"code":"123456","disease_description":"MClOcqnqNnBYhTgAiZVfKwPQiGKGrJLONyZTGHKVYDNpTgAqEksUOeIYDwAIntxlKmPIIHZYJQwuHoEmFhRgggSCcdWodsHvUefuFyltFfPysTwCzBLpyTnCWbyWOOdISclvfuAiTHSlKSEeqURmzGULkZYnZlsDtnuIlxTvLEmMDxjNLAhXIZMQhwZzxyzqBjUDwHjQuYxHRrkcOcxXuUdHuzIUYEMMLlstPHEueYitPjRdGYjWBdxQoCicsTPqviTIlscTHIHIIOlzKNuGYtVQYdBLfCWGvmcixNDihSsq","major_disease_id":"1490","major_disease_name":"肩关节不稳定","medical_record_pictures":[{"key":"","type":"7"}],"patient_age":16,"patient_gender":2,"patient_name":"面诊病人hPUb","patient_phone":"13328569999","source_type":"BAIDU_BRIDGE"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] order_number: 2024716849
+[INFO] 查看刚刚创建的订单详情
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"id":1175,"order_number":2024716849,"type":2,"source_type":"BAIDU_BRIDGE","status":1000,"patient_name":"面诊病人hPUb","patient_age":16,"patient_gender":2,"patient_phone":"13328569999","major_disease_id":1490,"major_disease_name":"肩关节不稳定","disease_description":"MClOcqnqNnBYhTgAiZVfKwPQiGKGrJLONyZTGHKVYDNpTgAqEksUOeIYDwAIntxlKmPIIHZYJQwuHoEmFhRgggSCcdWodsHvUefuFyltFfPysTwCzBLpyTnCWbyWOOdISclvfuAiTHSlKSEeqURmzGULkZYnZlsDtnuIlxTvLEmMDxjNLAhXIZMQhwZzxyzqBjUDwHjQuYxHRrkcOcxXuUdHuzIUYEMMLlstPHEueYitPjRdGYjWBdxQoCicsTPqviTIlscTHIHIIOlzKNuGYtVQYdBLfCWGvmcixNDihSsq","created_at":"2017-09-05T01:50:52.662Z","modified_at":"2017-09-05T01:50:52.662Z"}
+[INFO] ||	 TestCase END:	test_01_创建预约单保存
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_02_创建预约单_缺少患者姓名
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/edge-gateway/appointment/api/v1/orders
+[INFO] 请求数据: >>>>>  {"code":"123456","disease_description":"PLvMUeKpKtGMDFzNIfmmmyvtIZEpcUzUZCWNKrEQrmKtAIGXduEzQUrACJWcEdmeEtDrXXEPmnctnAiYJyZHXmWXJYWEDqLHHuyDAKuEepidRyYywNZovuQSuGtrDvlhSKveGkRUJIfsCcluPsfcMitNMpIbJvCCeOMQOxtBPAZVjXfYEqGYXSnEznquRjvnHmfUnTJtrtXcfjWCwsiYRpdovMFXuJonkLHctKggPeRjvgdLZFhFwHArArVLeWewNfOEfWsOwzoBKWutLXddqohKZXFJtefWZuMyRKcmJoEx","major_disease_id":"591","major_disease_name":"外阴腺泡状软组织肉瘤","medical_record_pictures":[{"key":"","type":"7"}],"patient_age":67,"patient_gender":1,"patient_name":"","patient_phone":"13917709999","source_type":"WECHAT"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"id":1176,"order_number":2024716851,"type":2,"source_type":"WECHAT","status":1000,"patient_name":"","patient_age":67,"patient_gender":1,"patient_phone":"13917709999","major_disease_id":591,"major_disease_name":"外阴腺泡状软组织肉瘤","disease_description":"PLvMUeKpKtGMDFzNIfmmmyvtIZEpcUzUZCWNKrEQrmKtAIGXduEzQUrACJWcEdmeEtDrXXEPmnctnAiYJyZHXmWXJYWEDqLHHuyDAKuEepidRyYywNZovuQSuGtrDvlhSKveGkRUJIfsCcluPsfcMitNMpIbJvCCeOMQOxtBPAZVjXfYEqGYXSnEznquRjvnHmfUnTJtrtXcfjWCwsiYRpdovMFXuJonkLHctKggPeRjvgdLZFhFwHArArVLeWewNfOEfWsOwzoBKWutLXddqohKZXFJtefWZuMyRKcmJoEx","created_at":"2017-09-05T01:50:53.261Z","modified_at":"2017-09-05T01:50:53.261Z"}
+[INFO] ||	 TestCase END:	test_02_创建预约单_缺少患者姓名
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_03_创建预约单_缺少患者性别或性别不正确
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/edge-gateway/appointment/api/v1/orders
+[INFO] 请求数据: >>>>>  {"code":"123456","disease_description":"gGLyVbCiCJGWhMUDONkzSvINRopcmiTxpkMvqlQynpxqgUgVYgUlXfWnVoWxDOkQkMlcNscnZPuoeNoiregUSAerdvlboWARBXzmxwxzYAzzviKYpJCtuhzlztenSqDlYDCBUQkvZDPASqBVQvqjFZjwwwHcBwuSeiTLjfQUyHdUIhtnkgKzETOuHtlNZbeQzhCSLhwLnSNgGyBzOJlZnnHkLccrOEsbzTyDUZIMcKtmehKjPOORStTsWRlvWTxItDquRtmyeeXNFZBUDBrdTODudSkrzDVumexHWPGgeRKj","major_disease_id":"2974","major_disease_name":"喉异物","medical_record_pictures":[{"key":"","type":"7"}],"patient_age":17,"patient_name":"面诊病人bnQq","patient_phone":"13051079999","source_type":"WEIBO"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1811001
+[INFO] [ message ]:	appointment-api调用错误
+[INFO] [ data ]:	null
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/edge-gateway/appointment/api/v1/orders
+[INFO] 请求数据: >>>>>  {"code":"123456","disease_description":"gGLyVbCiCJGWhMUDONkzSvINRopcmiTxpkMvqlQynpxqgUgVYgUlXfWnVoWxDOkQkMlcNscnZPuoeNoiregUSAerdvlboWARBXzmxwxzYAzzviKYpJCtuhzlztenSqDlYDCBUQkvZDPASqBVQvqjFZjwwwHcBwuSeiTLjfQUyHdUIhtnkgKzETOuHtlNZbeQzhCSLhwLnSNgGyBzOJlZnnHkLccrOEsbzTyDUZIMcKtmehKjPOORStTsWRlvWTxItDquRtmyeeXNFZBUDBrdTODudSkrzDVumexHWPGgeRKj","major_disease_id":"2974","major_disease_name":"喉异物","medical_record_pictures":[{"key":"","type":"7"}],"patient_age":17,"patient_gender":0,"patient_name":"面诊病人bnQq","patient_phone":"13051079999","source_type":"WEIBO"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"id":1177,"order_number":2024716862,"type":2,"source_type":"WEIBO","status":1000,"patient_name":"面诊病人bnQq","patient_age":17,"patient_gender":0,"patient_phone":"13051079999","major_disease_id":2974,"major_disease_name":"喉异物","disease_description":"gGLyVbCiCJGWhMUDONkzSvINRopcmiTxpkMvqlQynpxqgUgVYgUlXfWnVoWxDOkQkMlcNscnZPuoeNoiregUSAerdvlboWARBXzmxwxzYAzzviKYpJCtuhzlztenSqDlYDCBUQkvZDPASqBVQvqjFZjwwwHcBwuSeiTLjfQUyHdUIhtnkgKzETOuHtlNZbeQzhCSLhwLnSNgGyBzOJlZnnHkLccrOEsbzTyDUZIMcKtmehKjPOORStTsWRlvWTxItDquRtmyeeXNFZBUDBrdTODudSkrzDVumexHWPGgeRKj","created_at":"2017-09-05T01:50:53.420Z","modified_at":"2017-09-05T01:50:53.420Z"}
+[INFO] ||	 TestCase END:	test_03_创建预约单_缺少患者性别或性别不正确
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_04_创建预约单_缺少患者年龄
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/edge-gateway/appointment/api/v1/orders
+[INFO] 请求数据: >>>>>  {"code":"123456","disease_description":"QGSKiuTStqUHTlnbNvKqocXnyExOcFjunYvqxhgrTsUnUREbImBEEwZRYJYwVCciDQKjxDXYjmCWuecHnOWwvpQvXAMeugFBzCtCpzSIyzYzbDcxZoPgywtTmEtPmiFxpISORSOdHAQNpJnxTvouHNLKZzlImxTAeddpxWTZZJQqLYbeGkmLPIoRcfKMuiglAtqfeEHmcjHbLxsIexSRHIebzyJlnAOidEpjJlrQKJzqOAJYDznuEdljlgkLsvoJErzWBlqEnjHAPWxEWxTjwfHwGrXSwMVyNZvLzAxtmbPQ","major_disease_id":"3072","major_disease_name":"颊癌","medical_record_pictures":[{"key":"","type":"7"}],"patient_gender":1,"patient_name":"面诊病人MdQf","patient_phone":"13789109999","source_type":"PC_WEB"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1811001
+[INFO] [ message ]:	appointment-api调用错误
+[INFO] [ data ]:	null
+[INFO] ||	 TestCase END:	test_04_创建预约单_缺少患者年龄
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_05_创建预约单_缺少手机号
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/edge-gateway/appointment/api/v1/orders
+[INFO] 请求数据: >>>>>  {"code":"123456","disease_description":"XFjuWWjNliYOEdNZIsHsCgclmhOiKpdOmeIxTzxleVMKVAXGWtUjdnfbSvovITOLlQwAfxplbQSzBdBZNOLMRiVjeJshmrjHiODCMGMxIgDregWUyAcnPgfjWKkdYpZSPtGQfnTCfMSoiJLrmOYbHnKJwBBtnnEvfnbUMcrePtGuXKuBztsAdsOLNkWdUcdKiZZUsiCqHzXzVFrGwvrrYZyjYjfrtdumiPBWhVTtoypQiMYPqRfoUlpqdthyJrjliWyuwOKWeXqgovFsqFUisctiGMwcdJVMcbyeyfIckqWt","major_disease_id":"3477","major_disease_name":"妊娠期糖尿病","medical_record_pictures":[{"key":"","type":"7"}],"patient_age":93,"patient_gender":2,"patient_name":"面诊病人LNhq","source_type":"BUSINESS"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1998001
+[INFO] [ message ]:	"null"
+[INFO] [ data ]:	null
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/edge-gateway/appointment/api/v1/orders
+[INFO] 请求数据: >>>>>  {"code":"123456","disease_description":"XFjuWWjNliYOEdNZIsHsCgclmhOiKpdOmeIxTzxleVMKVAXGWtUjdnfbSvovITOLlQwAfxplbQSzBdBZNOLMRiVjeJshmrjHiODCMGMxIgDregWUyAcnPgfjWKkdYpZSPtGQfnTCfMSoiJLrmOYbHnKJwBBtnnEvfnbUMcrePtGuXKuBztsAdsOLNkWdUcdKiZZUsiCqHzXzVFrGwvrrYZyjYjfrtdumiPBWhVTtoypQiMYPqRfoUlpqdthyJrjliWyuwOKWeXqgovFsqFUisctiGMwcdJVMcbyeyfIckqWt","major_disease_id":"3477","major_disease_name":"妊娠期糖尿病","medical_record_pictures":[{"key":"","type":"7"}],"patient_age":93,"patient_gender":2,"patient_name":"面诊病人LNhq","patient_phone":"","source_type":"BUSINESS"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1899000
+[INFO] [ message ]:	验证码验证未通过
+[INFO] [ data ]:	null
+[INFO] ||	 TestCase END:	test_05_创建预约单_缺少手机号
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_06_创建预约单_缺少验证码或验证码错误
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/edge-gateway/appointment/api/v1/orders
+[INFO] 请求数据: >>>>>  {"code":"","disease_description":"PmDnhEZlyCFjppcSrAUQhcMfRGYecWjIKVMrCFIhlsfkKLASYdqnxdEewyAbjPhGyGXBqvnpcNrUSslKZYXgtXrozwRUvdvDOrjZcgkoSqYGvLcgoitTScmqutZoNCxjpwjZreZjLfDnGTWzWLjJJLTcYHskHUIOiVXuQYRCVDNzforNVYfNWereZKTOyOGeKlIRUswHGjmxXuFvQpNgMzVtYAIEleDASpAcKoVkkutVXBIJNOYbHLiBQMPLsFmXnjwHtIBPmYLJcyjbKZJiWXdhQWYNWmIpKEbkfhjHVkqG","major_disease_id":"2882","major_disease_name":"耳部恶性肿瘤","medical_record_pictures":[{"key":"","type":"7"}],"patient_age":53,"patient_gender":1,"patient_name":"面诊病人QlTj","patient_phone":"13398619999","source_type":"PC_WEB"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1899000
+[INFO] [ message ]:	验证码验证未通过
+[INFO] [ data ]:	null
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/edge-gateway/appointment/api/v1/orders
+[INFO] 请求数据: >>>>>  {"code":"121212","disease_description":"PmDnhEZlyCFjppcSrAUQhcMfRGYecWjIKVMrCFIhlsfkKLASYdqnxdEewyAbjPhGyGXBqvnpcNrUSslKZYXgtXrozwRUvdvDOrjZcgkoSqYGvLcgoitTScmqutZoNCxjpwjZreZjLfDnGTWzWLjJJLTcYHskHUIOiVXuQYRCVDNzforNVYfNWereZKTOyOGeKlIRUswHGjmxXuFvQpNgMzVtYAIEleDASpAcKoVkkutVXBIJNOYbHLiBQMPLsFmXnjwHtIBPmYLJcyjbKZJiWXdhQWYNWmIpKEbkfhjHVkqG","major_disease_id":"2882","major_disease_name":"耳部恶性肿瘤","medical_record_pictures":[{"key":"","type":"7"}],"patient_age":53,"patient_gender":1,"patient_name":"面诊病人QlTj","patient_phone":"13398619999","source_type":"PC_WEB"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1899000
+[INFO] [ message ]:	验证码验证未通过
+[INFO] [ data ]:	null
+[INFO] ||	 TestCase END:	test_06_创建预约单_缺少验证码或验证码错误
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_07_创建预约单_缺少确诊疾病
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/edge-gateway/appointment/api/v1/orders
+[INFO] 请求数据: >>>>>  {"code":"123456","disease_description":"wVZxssUGHzQRoCPnvbgReJecvvpALhmjdSGQRrRUMcTvoUmPuXXguZULsxxpZsJXBjbiRdJIXoSMmoOUZcrzxpdDkRinOVZOwRWDcDVwDuUsMSmWdFRVsxLBsASFRZiseYiXkhpseYUoIMnkGTGpUWefeHtGgqLkSudMkqgQCOUnqcundpfRAkVUyikFpQqnoTiohzJjFJqVAdAZuxhfugNcZwjVqyWUukOBMiqWsORfhyLRnAlLIUZioAqifvPAwEztTblpQgFxvdKWxjIDYvnCisHjOvTwUBzixMJxrDYg","major_disease_id":"","major_disease_name":"","medical_record_pictures":[{"key":"","type":"7"}],"patient_age":30,"patient_gender":1,"patient_name":"面诊病人mHgG","patient_phone":"13266309999","source_type":"BAIDU_BRIDGE"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"id":1178,"order_number":2024716877,"type":2,"source_type":"BAIDU_BRIDGE","status":1000,"patient_name":"面诊病人mHgG","patient_age":30,"patient_gender":1,"patient_phone":"13266309999","major_disease_name":"","disease_description":"wVZxssUGHzQRoCPnvbgReJecvvpALhmjdSGQRrRUMcTvoUmPuXXguZULsxxpZsJXBjbiRdJIXoSMmoOUZcrzxpdDkRinOVZOwRWDcDVwDuUsMSmWdFRVsxLBsASFRZiseYiXkhpseYUoIMnkGTGpUWefeHtGgqLkSudMkqgQCOUnqcundpfRAkVUyikFpQqnoTiohzJjFJqVAdAZuxhfugNcZwjVqyWUukOBMiqWsORfhyLRnAlLIUZioAqifvPAwEztTblpQgFxvdKWxjIDYvnCisHjOvTwUBzixMJxrDYg","created_at":"2017-09-05T01:50:53.695Z","modified_at":"2017-09-05T01:50:53.695Z"}
+[INFO] ||	 TestCase END:	test_07_创建预约单_缺少确诊疾病
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_08_创建预约单_缺少疾病描述
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/edge-gateway/appointment/api/v1/orders
+[INFO] 请求数据: >>>>>  {"code":"123456","disease_description":"","major_disease_id":"1097","major_disease_name":"腹股沟疝","medical_record_pictures":[{"key":"","type":"7"}],"patient_age":6,"patient_gender":1,"patient_name":"面诊病人hYqt","patient_phone":"13051799999","source_type":"BUSINESS"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"id":1179,"order_number":2024716883,"type":2,"source_type":"BUSINESS","status":1000,"patient_name":"面诊病人hYqt","patient_age":6,"patient_gender":1,"patient_phone":"13051799999","major_disease_id":1097,"major_disease_name":"腹股沟疝","disease_description":"","created_at":"2017-09-05T01:50:53.865Z","modified_at":"2017-09-05T01:50:53.865Z"}
+[INFO] ||	 TestCase END:	test_08_创建预约单_缺少疾病描述
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] ============================================================================================================= 
+[INFO] ||    TestAPI END:	CreateAppointment
+[INFO] ============================================================================================================= 
+

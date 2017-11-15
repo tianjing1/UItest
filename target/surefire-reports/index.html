@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-doctor">
+              <span class="suite-name border-failed">doctor</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-doctor">
+                    <span>C:\Users\TianJing\Documents\Code\serviceapi\src\test\resources\config-test\createOrder.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-doctor">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-doctor">
+                    <span>1 group</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-doctor">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-doctor">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-doctor">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-doctor">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">1 method, 1 failed,   </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-doctor" class="hide-methods failed suite-doctor"> (hide)</a> <!-- hide-methods failed suite-doctor -->
+                      <a href="#" panel-name="suite-doctor" class="show-methods failed suite-doctor"> (show)</a> <!-- show-methods failed suite-doctor -->
+                    </span>
+                    <div class="method-list-content failed suite-doctor">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-doctor" title="com.mingyizhudao.qa.functiontest.doctor.CreateDesignatedOrder" hash-for-method="test_01_指定医生创建待处理的订单">test_01_指定医生创建待处理的订单</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-doctor -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-doctor" class="panel doctor">
+          <div class="suite-doctor-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.mingyizhudao.qa.functiontest.doctor.CreateDesignatedOrder</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="test_01_指定医生创建待处理的订单">
+                  </a> <!-- test_01_指定医生创建待处理的订单 -->
+                  <span class="method-name">test_01_指定医生创建待处理的订单</span>
+                  <div class="stack-trace">net.sf.json.JSONException: null object
+	at net.sf.json.JSONObject.verifyIsNull(JSONObject.java:2744)
+	at net.sf.json.JSONObject.getString(JSONObject.java:2087)
+	at com.mingyizhudao.qa.functiontest.doctor.CreateOrder.s_CreateOrder(CreateOrder.java:35)
+	at com.mingyizhudao.qa.functiontest.doctor.CreateDesignatedOrder.test_01_指定医生创建待处理的订单(CreateDesignatedOrder.java:25)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-doctor-class-failed -->
+        </div> <!-- panel doctor -->
+        <div panel-name="test-xml-doctor" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\TianJing\Documents\Code\serviceapi\src\test\resources\config-test\createOrder.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;doctor&quot;&gt;
+  &lt;test name=&quot;doctor&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;pending&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.mingyizhudao.qa.functiontest.doctor.CreateDesignatedOrder&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- doctor --&gt;
+&lt;/suite&gt; &lt;!-- doctor --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-doctor" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for doctor</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">doctor (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-doctor" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for doctor</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">pending</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">test_01_指定医生创建待处理的订单</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-doctor" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for doctor</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_doctor');
+function tableData_doctor() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'test_01_指定医生创建待处理的订单')
+data.setCell(0, 2, 'com.mingyizhudao.qa.functiontest.doctor.CreateDesignatedOrder')
+data.setCell(0, 3, 400);
+window.suiteTableData['doctor']= { tableData: data, tableDiv: 'times-div-doctor'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 400 ms</span>
+              <div id="times-div-doctor">
+              </div> <!-- times-div-doctor -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-doctor" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for doctor</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">test_01_指定医生创建待处理的订单</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/createorder</span>
+                <span class="reporter-method-output">[INFO] 请求数据: >>>>>  {"order":{"diagnosis":"WlCSZVzdCNcoRMPRVFAyKYTHgGTCPqIkYtuDTCqNkkQxSeteXBUmIGcTgWrWrzfrYVtiqDeYrwPpAmlLhfpAEHdoiKYtjuJeZZpkGqCpWbkuRVfwooDYMMKVhYKMiGwWzNeZcBclBOoqNolSOixzWUnkjgvlXIkfDbzDfLppJuCiMEibSlwTQrGUfudEMDNOZjOzKejwLdqzuLrtFbxRXLTpIbAoDRAysCCVvySTeFNoZOwWFMvJUwYjVXoXYGVROIwmerojKdQtDWFXKLEJTyCNoSrYedgKUwtqFyXwkIMb","expected_doctor_id":"","expected_surgery_due_date":"2017-09-10","expected_surgery_hospital_id":"","expected_surgery_start_date":"2017-09-09","is_reoperation":1,"major_disease_id":"","medical_record_pictures":[{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg","type":"1"},{"key":"2017/05/04/1315bbe0-2836-4776-8216-ec55044f32dd/IMG_20161013_172442.jpg","type":"1"}],"minor_disease_id":"","patient_age":29,"patient_gender":2,"patient_name":"王二UFrP","patient_phone":"13654389999"}}</span>
+                <span class="reporter-method-output">[INFO] 等待回应: <<<<<  200 OK</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-doctor" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">3 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.mingyizhudao.qa.functiontest.doctor.CreateDesignatedOrder</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">test_02_指定医生创建订单_客服领取未推荐专家的医生</span>
+                <br/>
+                <span class="ignored-method-name">test_04_指定医生创建待支付预约金订单_推荐指定的专家_确认合作</span>
+                <br/>
+                <span class="ignored-method-name">test_03_指定医生创建订单_推荐指定的专家</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-doctor" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.mingyizhudao.qa.functiontest.doctor.CreateDesignatedOrder</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test_01_指定医生创建待处理的订单</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

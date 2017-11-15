@@ -1,0 +1,378 @@
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=370000
+[INFO] 请求数据: >>>>>  provinceId=370000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=620000
+[INFO] 请求数据: >>>>>  provinceId=620000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=320000
+[INFO] 请求数据: >>>>>  provinceId=320000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=110000
+[INFO] 请求数据: >>>>>  provinceId=110000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=530000
+[INFO] 请求数据: >>>>>  provinceId=530000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=460000
+[INFO] 请求数据: >>>>>  provinceId=460000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=330000
+[INFO] 请求数据: >>>>>  provinceId=330000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=310000
+[INFO] 请求数据: >>>>>  provinceId=310000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=120000
+[INFO] 请求数据: >>>>>  provinceId=120000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=610000
+[INFO] 请求数据: >>>>>  provinceId=610000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=650000
+[INFO] 请求数据: >>>>>  provinceId=650000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=520000
+[INFO] 请求数据: >>>>>  provinceId=520000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=340000
+[INFO] 请求数据: >>>>>  provinceId=340000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=820000
+[INFO] 请求数据: >>>>>  provinceId=820000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=430000
+[INFO] 请求数据: >>>>>  provinceId=430000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=130000
+[INFO] 请求数据: >>>>>  provinceId=130000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=810000
+[INFO] 请求数据: >>>>>  provinceId=810000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=210000
+[INFO] 请求数据: >>>>>  provinceId=210000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=510000
+[INFO] 请求数据: >>>>>  provinceId=510000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=640000
+[INFO] 请求数据: >>>>>  provinceId=640000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=220000
+[INFO] 请求数据: >>>>>  provinceId=220000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=350000
+[INFO] 请求数据: >>>>>  provinceId=350000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=420000
+[INFO] 请求数据: >>>>>  provinceId=420000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=440000
+[INFO] 请求数据: >>>>>  provinceId=440000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=500000
+[INFO] 请求数据: >>>>>  provinceId=500000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=140000
+[INFO] 请求数据: >>>>>  provinceId=140000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=360000
+[INFO] 请求数据: >>>>>  provinceId=360000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=230000
+[INFO] 请求数据: >>>>>  provinceId=230000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=630000
+[INFO] 请求数据: >>>>>  provinceId=630000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=410000
+[INFO] 请求数据: >>>>>  provinceId=410000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=710000
+[INFO] 请求数据: >>>>>  provinceId=710000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=150000
+[INFO] 请求数据: >>>>>  provinceId=150000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=540000
+[INFO] 请求数据: >>>>>  provinceId=540000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/cities?provinceId=450000
+[INFO] 请求数据: >>>>>  provinceId=450000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=88&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=88&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=46&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=46&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=110&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=110&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=111&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=111&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=112&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=112&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=113&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=113&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=114&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=114&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=115&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=115&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=116&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=116&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=117&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=117&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=118&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=118&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=92&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=92&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=93&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=93&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=94&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=94&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=95&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=95&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=96&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=96&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=97&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=97&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=54&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=54&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=10&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=10&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=99&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=99&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=12&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=12&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=13&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=13&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=57&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=57&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=14&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=14&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=16&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=16&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=18&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=18&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=2&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=2&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=3&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=3&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=5&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=5&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=7&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=7&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=8&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=8&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=9&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=9&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=21&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=21&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=65&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=65&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=22&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=22&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=24&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=24&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=25&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=25&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=26&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=26&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=70&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=70&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=75&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=75&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=76&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=76&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=79&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=79&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=38&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=38&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=100&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=100&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=101&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=101&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=102&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=102&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=103&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=103&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=104&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=104&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=105&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=105&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=106&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=106&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=107&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=107&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=108&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=108&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=82&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=82&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=109&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=109&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=84&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=84&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=85&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=85&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=86&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=86&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/diseases?diseaseCategoryId=87&pageSize=1000
+[INFO] 请求数据: >>>>>  diseaseCategoryId=87&pageSize=1000
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/departmentCategory?type=CHEST_HOSPITAL
+[INFO] 请求数据: >>>>>  type=CHEST_HOSPITAL
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/departmentCategory?type=MCH_HOSPITAL
+[INFO] 请求数据: >>>>>  type=MCH_HOSPITAL
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/departmentCategory?type=ORTHOPAEDIC_HOSPITAL
+[INFO] 请求数据: >>>>>  type=ORTHOPAEDIC_HOSPITAL
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/departmentCategory?type=MATERNITY_HOSPITAL
+[INFO] 请求数据: >>>>>  type=MATERNITY_HOSPITAL
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/departmentCategory?type=CHILDREN_HOSPITAL
+[INFO] 请求数据: >>>>>  type=CHILDREN_HOSPITAL
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/departmentCategory?type=CVD_HOSPITAL
+[INFO] 请求数据: >>>>>  type=CVD_HOSPITAL
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/departmentCategory?type=POLYCLINIC
+[INFO] 请求数据: >>>>>  type=POLYCLINIC
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/departmentCategory?type=COMMUNITY_MEDICAL_INSTITUTION
+[INFO] 请求数据: >>>>>  type=COMMUNITY_MEDICAL_INSTITUTION
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/departmentCategory?type=STOMATOLOGY_HOSPITAL
+[INFO] 请求数据: >>>>>  type=STOMATOLOGY_HOSPITAL
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/departmentCategory?type=ENT_HOSPITAL
+[INFO] 请求数据: >>>>>  type=ENT_HOSPITAL
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/departmentCategory?type=OPHTHALMOLOGY_HOSPITAL
+[INFO] 请求数据: >>>>>  type=OPHTHALMOLOGY_HOSPITAL
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/departmentCategory?type=CHINESE_WESTERN_HOSPITAL
+[INFO] 请求数据: >>>>>  type=CHINESE_WESTERN_HOSPITAL
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/departmentCategory?type=TUMOUR_HOSPITAL
+[INFO] 请求数据: >>>>>  type=TUMOUR_HOSPITAL
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://192.168.33.1/api/v1/departmentCategory?type=BURN_PLASTICS_HOSPITAL
+[INFO] 请求数据: >>>>>  type=BURN_PLASTICS_HOSPITAL
+[INFO] 等待回应: <<<<<  200 null
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/generic-trading/internal/api/v1/testToken?staffId=SH0133
+[INFO] 请求数据: >>>>>  staffId=SH0133
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/internal/api/session/create?number=SH0133
+[INFO] 请求数据: >>>>>  number=SH0133
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/internal/api/session/create?number=Sh0143
+[INFO] 请求数据: >>>>>  number=Sh0143
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13678249999 ...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13678249999"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile是: 13678249999...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13678249999","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjhmYjQxY2JiIn0.eyJ1aWQiOiI2NjYzIiwibW9iaWxlIjoiMTM2NzgyNDk5OTkiLCJleHAiOjE1MTA1NjI5NjMsImlhdCI6MTUxMDU2MjM2M30.lE7n0jkeCC9lpua7AO4I3zJ0V9N9-ZwROcDxz-CMeYw
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13678249999
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjhmYjQxY2JiIn0.eyJ1aWQiOiI2NjYzIiwibW9iaWxlIjoiMTM2NzgyNDk5OTkiLCJleHAiOjE1MTA1NjI5NjMsImlhdCI6MTUxMDU2MjM2M30.lE7n0jkeCC9lpua7AO4I3zJ0V9N9-ZwROcDxz-CMeYw
+[INFO] doctorId为:	6663
+[INFO] 更新医生信息...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/v1/updatedoctorprofile
+[INFO] 请求数据: >>>>>  {"doctor":{"academic_title_list":"NONE","department":"大科室Zh","doctor_card_pictures":[],"exp_list":[],"hospital_id":"57","medical_title_list":"ASSOCIATE_CHIEF_NURSE","name":"田静qEHb"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"OK","data":{"doctor_id":6663}}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"OK","data":{"doctor":{"doctor_card_pictures":[],"is_required":1,"exp_list":[],"AssistantInfo":[],"user_id":6663,"mobile":"13678249999","name":"田静qEHb","hospital_id":57,"hospital_name":"北京大学口腔医院","department":"大科室Zh","academic_title":"无","medical_title":"副主任护师","province":"北京","city":"北京","is_verified":2,"created_at":"2017-11-13 16:39:23.000","modified_at":"2017-11-13 16:39:24.000","signed_status":"NOT_SIGNED","academic_title_list":"NONE","medical_title_list":"ASSOCIATE_CHIEF_NURSE","city_id":110100,"order_count":0,"province_id":110000,"audit_state":"AUDIT_NOT","last_login":"2017-11-13T08:39:23.000+0000","last_ip":"192.168.10.32","is_test":false,"source_type":1,"service_status":0}}}
+[INFO] doctorName为:	田静qEHb
+[INFO] doctorHospitalId为:	57
+[INFO] doctorHospitalName为:	北京大学口腔医院
+[INFO] 认证并同步医生...
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v3/doctors/6663/verificationsSynchronization
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"程序认证注册医生并关联到医库","is_signed":"1","department_category_id":"15"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/6663/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] is_verified为:	1
+[INFO] expert_id为:	10755
+[INFO] 初始化信息完成，准备执行用例
+[INFO] mainDoctorId为:	6663
+[INFO] mainDoctorName为:	田静qEHb
+[INFO] mainDoctorToken为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjhmYjQxY2JiIn0.eyJ1aWQiOiI2NjYzIiwibW9iaWxlIjoiMTM2NzgyNDk5OTkiLCJleHAiOjE1MTA1NjI5NjMsImlhdCI6MTUxMDU2MjM2M30.lE7n0jkeCC9lpua7AO4I3zJ0V9N9-ZwROcDxz-CMeYw
+[INFO] mainDoctorHospitalId为:	57
+[INFO] mainDoctorHospitalName为:	北京大学口腔医院
+[INFO] mainExpertId为:	10755
+[INFO] mainOperatorId为:	jing.tian@mingyizhudao.com
+[INFO] crm_token为:	eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsIm1vYmlsZSI6IjEzODE3NjM0MjAzIiwiYXZhdGFyIjoiaHR0cHM6Ly9wLnFsb2dvLmNuL2Jpem1haWwvcXBKVkdDYTFHNmliTjFwbExUVElXOWFxalVna0d2Q013aWJpYzFjaDZHZExORkVJRzN6d1dkbGJBLzAiLCJ1c2VyTmFtZSI6IuaWuei2hSIsInVpZCI6IlNIMDEzMyIsIm5iZiI6MTUxMDU2MjM2Mywic3RhZmZfaWQiOiJTSDAxMzMiLCJuYW1lIjoi5pa56LaFIiwiZXhwIjoxNTExMTY3MTYzLCJkZXBhcnRtZW50IjoiMTMiLCJ1c2VyIjoiY2hhby5mYW5nQG1pbmd5aXpodWRhby5jb20iLCJpYXQiOjE1MTA1NjIzNjMsImVtYWlsIjoiY2hhby5mYW5nQG1pbmd5aXpodWRhby5jb20iLCJqdGkiOiLllIXutp_ukZHkg4HhsrfmpIjilbTvlKjlpofpvKrss6jmopnijbPshKPomoXhk4gifQ.Qh9pqnh1-Qk4b2Y6Ey8larhaFcBhgFKM1AUZBkgkHHU
+[INFO] bda_session为:	011dc756-c0e0-4895-8de9-5f4ae8765555
+[INFO] bda_session_staff为:	7ee2d844-a160-4c4e-a557-0560b4a2a0db
+[INFO] 工单号为：2989
+[INFO] 工单转交给其他受理人，是否存当前受理人为田小静；期望是

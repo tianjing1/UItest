@@ -1,0 +1,107 @@
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+[INFO] //    TestAPI START:	GetOrderDetail_V1
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_05_获取订单详情_我收到的订单_刚被推荐
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13920669999 ...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13920669999"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] mobile是: 13920669999...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13920669999","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjRiZDY0NDIyIn0.eyJ1aWQiOiI0OTczIiwibW9iaWxlIjoiMTM5MjA2Njk5OTkiLCJleHAiOjE1MDQxNDk0OTIsImlhdCI6MTUwNDA2MzA5Mn0.ag6KMQimQkOBQD1jsptyWb_DsgiPXJ-s1egBYH1fReA
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13920669999
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjRiZDY0NDIyIn0.eyJ1aWQiOiI0OTczIiwibW9iaWxlIjoiMTM5MjA2Njk5OTkiLCJleHAiOjE1MDQxNDk0OTIsImlhdCI6MTUwNDA2MzA5Mn0.ag6KMQimQkOBQD1jsptyWb_DsgiPXJ-s1egBYH1fReA
+[INFO] doctorId为:	4973
+[INFO] 更新医生信息...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/v1/updatedoctorprofile
+[INFO] 请求数据: >>>>>  {"doctor":{"academic_title_list":"ASSOCIATE_PROFESSOR","department":"大科室Cb","doctor_card_pictures":[],"exp_list":[],"hospital_id":"57","inviter_no":"SH0133","major_id":"5","medical_title_list":"NURSE","name":"田静oNIm"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] doctorName为:	田静oNIm
+[INFO] doctorHospitalId为:	57
+[INFO] doctorHospitalName为:	北京大学口腔医院
+[INFO] 认证并同步医生...
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v2/doctors/4973/verificationssynchronization
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"程序认证注册医生并关联到医库","is_signed":"1"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/4973/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] is_verified为:	1
+[INFO] expert_id为:	null
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13547169999 ...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13547169999"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] mobile是: 13547169999...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13547169999","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjIyYmVhZWM3In0.eyJ1aWQiOiI0OTc0IiwibW9iaWxlIjoiMTM1NDcxNjk5OTkiLCJleHAiOjE1MDQxNDk0OTYsImlhdCI6MTUwNDA2MzA5Nn0._QQmZrmKJmt45wM6GvdMRc-0q5UgOyBrstcgD3UFz6E
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13547169999
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjIyYmVhZWM3In0.eyJ1aWQiOiI0OTc0IiwibW9iaWxlIjoiMTM1NDcxNjk5OTkiLCJleHAiOjE1MDQxNDk0OTYsImlhdCI6MTUwNDA2MzA5Nn0._QQmZrmKJmt45wM6GvdMRc-0q5UgOyBrstcgD3UFz6E
+[INFO] doctorId为:	4974
+[INFO] 更新医生信息...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/v1/updatedoctorprofile
+[INFO] 请求数据: >>>>>  {"doctor":{"academic_title_list":"ASSOCIATE_PROFESSOR","department":"大科室FA","doctor_card_pictures":[],"exp_list":[],"hospital_id":"26184","inviter_no":"SH0143","major_id":"97","medical_title_list":"ASSOCIATE_CHIEF_TECHNICIAN","name":"田静tTUd"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] doctorName为:	田静tTUd
+[INFO] doctorHospitalId为:	26184
+[INFO] doctorHospitalName为:	重庆市南岸区精神病医院
+[INFO] 认证并同步医生...
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v2/doctors/4974/verificationssynchronization
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"程序认证注册医生并关联到医库","is_signed":"1"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/4974/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] is_verified为:	1
+[INFO] expert_id为:	null
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/createorder
+[INFO] 请求数据: >>>>>  {"order":{"diagnosis":"WIocqjKAMLiqYydedrFIMmpfttSeocMOZCXBVeokEZooxsHpcPyfJAxMELZmrwWHbPyEbuilWOmocMYdHiNMVNDszkewuDTbRXEsTwtlTwOEcnKuSoowVBHMWoqggFrgppkybrhtEsbHUBUuqBrksxStEDWQkilKuEKCgNmzMSwZuIvWWtCdImnLRewJUsFVFBOhjfgEZLddrtwcbNdrnxbnSqJTrUhkKQViJtgzDsFJbzxhDVrNFbVJuKTcfRYduBEnMMeflQnxSdDhPrkUppxuDvVUNHMvnrEubFGdKCbR","expected_doctor_id":"3896","expected_surgery_due_date":"2017-09-05","expected_surgery_hospital_id":"6082","expected_surgery_start_date":"2017-08-31","is_reoperation":0,"major_disease_id":"1146","medical_record_pictures":[{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg","type":"1"},{"key":"2017/05/04/1315bbe0-2836-4776-8216-ec55044f32dd/IMG_20161013_172442.jpg","type":"1"}],"minor_disease_id":"1922","patient_age":50,"patient_gender":1,"patient_name":"王二kGRG","patient_phone":"13924949999"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/orders/1024163120/orderDetail
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/crm/api/v1/orders/1024163120/receiveTask
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/orders/1024163120/orderDetail
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/orders/1024163120/orderDetail
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[ERROR] 订单处于不可推荐状态
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/orders/1024163120?flag=2
+[INFO] 请求数据: >>>>>  flag=2
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	2210418
+[INFO] [ message ]:	您不能查看相关该用户的订单
+[INFO] [ data ]:	null
+[INFO] ||	 TestCase END:	test_05_获取订单详情_我收到的订单_刚被推荐
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] ============================================================================================================= 
+[INFO] ||    TestAPI END:	GetOrderDetail_V1
+[INFO] ============================================================================================================= 
+

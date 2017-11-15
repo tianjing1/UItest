@@ -1,0 +1,16 @@
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+[INFO] //    TestAPI START:	recommendOrder
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_01_新建订单_确认合作
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/createorder
+[INFO] 请求数据: >>>>>  {"order":{"diagnosis":"PyJsOwbKbDOfGiTDRACPczfeBQJKjANTUhJqhRCiCkRSqwjQYPCbVntJrBywvrRsTwIFqNJPnbyLgRsQMjLzbHptQxdgovXKLuQlqUgIphgjpKMPyJuLMGoizoUsAdvgRwrBNUdNmKFyuXMhdOmmUKrMsQGuHynJlHyYBmbDzIvOTkzFVzveSxoVgTWuWRMvUUfxYhTJmwebIjOJrGmCrmphIPBBwVmyHweKLqUzBEtRoNgrBchOTQXLpbysiGIXrsteSXJHjFGxEufbLqurcYsOWwehDhOUousYACHEkrmq","expected_doctor_id":"1161","expected_surgery_due_date":"2017-11-08","expected_surgery_hospital_id":"14147","expected_surgery_start_date":"2017-11-08","is_reoperation":0,"major_disease_id":"1060","medical_record_pictures":[{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg","type":"1"},{"key":"2017/05/04/1315bbe0-2836-4776-8216-ec55044f32dd/IMG_20161013_172442.jpg","type":"1"}],"minor_disease_id":"1881","patient_age":12,"patient_gender":2,"patient_name":"王二jkwv","patient_phone":"13421899999"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] ||	 TestCase END:	test_01_新建订单_确认合作
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] ============================================================================================================= 
+[INFO] ||    TestAPI END:	recommendOrder
+[INFO] ============================================================================================================= 
+

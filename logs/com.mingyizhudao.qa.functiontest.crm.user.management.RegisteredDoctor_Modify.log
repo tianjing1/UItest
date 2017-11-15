@@ -1,0 +1,444 @@
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+[INFO] //    TestAPI START:	RegisteredDoctor_Modify
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_01_CRM更新医生详情_综合正确调用
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13982209999 ...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13982209999"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] mobile是: 13982209999...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13982209999","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6ImIyMzEwOTJhIn0.eyJ1aWQiOiI1NDA2IiwibW9iaWxlIjoiMTM5ODIyMDk5OTkiLCJleHAiOjE1MDQ3Nzc1MzgsImlhdCI6MTUwNDY5MTEzOH0.UdKFFBAbGtfVaTphW9qhkf2fa7dOEHTNLdW9ukG9jQ4
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13982209999
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6ImIyMzEwOTJhIn0.eyJ1aWQiOiI1NDA2IiwibW9iaWxlIjoiMTM5ODIyMDk5OTkiLCJleHAiOjE1MDQ3Nzc1MzgsImlhdCI6MTUwNDY5MTEzOH0.UdKFFBAbGtfVaTphW9qhkf2fa7dOEHTNLdW9ukG9jQ4
+[INFO] doctorId为:	5406
+[INFO] 更新医生信息...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/v1/updatedoctorprofile
+[INFO] 请求数据: >>>>>  {"doctor":{"academic_title_list":"NONE","department":"大科室lA","doctor_card_pictures":[],"exp_list":[],"hospital_id":"57","medical_title_list":"NURSE","name":"田静elye"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor_id":"5406"}}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor":{"user_id":5406,"mobile":"13982209999","name":"\u7530\u9759elye","hospital_id":57,"hospital_name":"\u5317\u4eac\u5927\u5b66\u53e3\u8154\u533b\u9662","department":"\u5927\u79d1\u5ba4lA","major_id":"","major_name":"","academic_title":"\u5176\u4ed6","medical_title":"\u62a4\u5e08\/\u58eb","inviter_no":"","inviter_name":"","province":"\u5317\u4eac","city":"\u5317\u4eac","is_verified":"2","date_verified":"","city_id":110100,"order_count":"","province_id":110000,"academic_title_list":"NONE","medical_title_list":"NURSE","register_id":"","exp_list":[],"activated_state":1,"is_required":0,"status_count":{"agentId":{"count":0},"surgeonId":{"count":0}},"AssistantInfo":[{"id":258,"staff_id":"SH0133","name":"\u65b9\u8d85","province_id":110000,"province_name":"\u5317\u4eac","city_id":110100,"city_name":"\u5317\u4eac","distributed_begin_at":"2017-08-24 14:03:57","distributed_end_at":null,"created_at":"2017-08-24 14:03:57","modified_at":null,"status":0,"team_group":13,"avatar":"https:\/\/p.qlogo.cn\/bizmail\/qpJVGCa1G6ibN1plLTTIW9aqjUgkGvCMwibic1ch6GdLNFEIG3zwWdlbA\/0","mobile":"13817634203"}]}}}
+[INFO] doctorName为:	田静elye
+[INFO] doctorHospitalId为:	57
+[INFO] doctorHospitalName为:	北京大学口腔医院
+[INFO] 认证并同步医生...
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v3/doctors/5406/verificationsSynchronization
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"程序认证注册医生并关联到医库","is_signed":"1","department_category_id":"10"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5406/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] is_verified为:	1
+[INFO] expert_id为:	9202
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v2/medicallibrary/hospitals/1632
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"id":1632,"name":"中国人民解放军第三0二医院","city_id":110100,"user_visible":false,"doctor_visible":false,"created_at":"2017-04-06T10:32:38.000Z","modified_at":"2017-04-06T10:32:38.000Z","hospital_level":3,"province_id":110000,"province_name":"北京","city_name":"北京"}
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v1/doctors/5406/profiles
+[INFO] 请求数据: >>>>>  {"content":"自动化修改医生信息","department":"科室综合","city_id":"320100","hospital_id":"1632","major_id":"104","academic_title":"PROFESSOR","medical_title":"ASSOCIATE_CHIEF_NURSE"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"成功","data":{"user_id":5406,"mobile":"13982209999","name":"田静elye","hospital_id":1632,"hospital_name":"中国人民解放军第三0二医院","department":"科室综合","major_id":104,"major_name":"骨与软组织肿瘤","academic_title":"教授","medical_title":"副主任护师","inviter_no":"","inviter_name":"","province":"北京","city":"北京","is_verified":"1","date_verified":"2017-09-06 17:45:42","created_at":"2017-09-06 17:45:40","modified_at":"2017-09-06 17:45:43","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":"","doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"PROFESSOR","medical_title_list":"ASSOCIATE_CHIEF_NURSE","city_id":110100,"create_order_time":null,"icon":null,"register_id":9202,"signed_time":"2017-09-06 17:45:42","order_count":0,"province_id":110000,"user_visible":0,"audit_time":"2017-09-06 17:45:43","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":10,"department_category_name":"妇产科","service_status":0}}
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5406,"mobile":"13982209999","name":"田静elye","hospital_id":1632,"hospital_name":"中国人民解放军第三0二医院","department":"科室综合","major_id":104,"major_name":"骨与软组织肿瘤","academic_title":"教授","medical_title":"副主任护师","inviter_no":"","inviter_name":"","province":"北京","city":"北京","is_verified":"1","date_verified":"2017-09-06 17:45:42","created_at":"2017-09-06 17:45:40","modified_at":"2017-09-06 17:45:43","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":"","doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"PROFESSOR","medical_title_list":"ASSOCIATE_CHIEF_NURSE","city_id":110100,"create_order_time":null,"icon":null,"register_id":9202,"signed_time":"2017-09-06 17:45:42","order_count":0,"province_id":110000,"user_visible":0,"audit_time":"2017-09-06 17:45:43","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":10,"department_category_name":"妇产科","service_status":0}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5406/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5406,"mobile":"13982209999","name":"田静elye","hospital_id":1632,"hospital_name":"中国人民解放军第三0二医院","department":"科室综合","major_id":104,"major_name":"骨与软组织肿瘤","academic_title":"教授","medical_title":"副主任护师","inviter_no":"","inviter_name":"","province":"北京","city":"北京","is_verified":"1","date_verified":"2017-09-06 17:45:42","created_at":"2017-09-06 17:45:40","modified_at":"2017-09-06 17:45:43","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":[],"doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"PROFESSOR","medical_title_list":"ASSOCIATE_CHIEF_NURSE","city_id":110100,"create_order_time":null,"icon":[],"register_id":9202,"signed_time":"2017-09-06 17:45:42","order_count":0,"province_id":110000,"user_visible":0,"audit_time":"2017-09-06 17:45:43","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":10,"department_category_name":"妇产科","service_status":0,"staff_id":"SH0133","staff_name":"方超"}
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v1/doctors/540611111/profiles
+[INFO] 请求数据: >>>>>  {"content":"自动化修改医生信息","department":"科室综合","city_id":"320100","hospital_id":"1632","major_id":"104","academic_title":"PROFESSOR","medical_title":"ASSOCIATE_CHIEF_NURSE"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	2210216
+[INFO] [ message ]:	该用户不存在
+[INFO] [ data ]:	null
+[INFO] ||	 TestCase END:	test_01_CRM更新医生详情_综合正确调用
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_03_CRM更新医生详情_更新所在医院
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13901989999 ...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13901989999"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] mobile是: 13901989999...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13901989999","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjgzMzEwN2RjIn0.eyJ1aWQiOiI1NDA3IiwibW9iaWxlIjoiMTM5MDE5ODk5OTkiLCJleHAiOjE1MDQ3Nzc1NDQsImlhdCI6MTUwNDY5MTE0NH0.PerBEvpZ9mHpmhd04mI0Ap6Wd1e-qxnnMUB7lXUJ3PA
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13901989999
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjgzMzEwN2RjIn0.eyJ1aWQiOiI1NDA3IiwibW9iaWxlIjoiMTM5MDE5ODk5OTkiLCJleHAiOjE1MDQ3Nzc1NDQsImlhdCI6MTUwNDY5MTE0NH0.PerBEvpZ9mHpmhd04mI0Ap6Wd1e-qxnnMUB7lXUJ3PA
+[INFO] doctorId为:	5407
+[INFO] 更新医生信息...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/v1/updatedoctorprofile
+[INFO] 请求数据: >>>>>  {"doctor":{"academic_title_list":"NONE","department":"大科室lA","doctor_card_pictures":[],"exp_list":[],"hospital_id":"57","medical_title_list":"NURSE","name":"田静elye"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor_id":"5407"}}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor":{"user_id":5407,"mobile":"13901989999","name":"\u7530\u9759elye","hospital_id":57,"hospital_name":"\u5317\u4eac\u5927\u5b66\u53e3\u8154\u533b\u9662","department":"\u5927\u79d1\u5ba4lA","major_id":"","major_name":"","academic_title":"\u5176\u4ed6","medical_title":"\u62a4\u5e08\/\u58eb","inviter_no":"","inviter_name":"","province":"\u5317\u4eac","city":"\u5317\u4eac","is_verified":"2","date_verified":"","city_id":110100,"order_count":"","province_id":110000,"academic_title_list":"NONE","medical_title_list":"NURSE","register_id":"","exp_list":[],"activated_state":1,"is_required":0,"status_count":{"agentId":{"count":0},"surgeonId":{"count":0}},"AssistantInfo":[{"id":258,"staff_id":"SH0133","name":"\u65b9\u8d85","province_id":110000,"province_name":"\u5317\u4eac","city_id":110100,"city_name":"\u5317\u4eac","distributed_begin_at":"2017-08-24 14:03:57","distributed_end_at":null,"created_at":"2017-08-24 14:03:57","modified_at":null,"status":0,"team_group":13,"avatar":"https:\/\/p.qlogo.cn\/bizmail\/qpJVGCa1G6ibN1plLTTIW9aqjUgkGvCMwibic1ch6GdLNFEIG3zwWdlbA\/0","mobile":"13817634203"}]}}}
+[INFO] doctorName为:	田静elye
+[INFO] doctorHospitalId为:	57
+[INFO] doctorHospitalName为:	北京大学口腔医院
+[INFO] 认证并同步医生...
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v3/doctors/5407/verificationsSynchronization
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"程序认证注册医生并关联到医库","is_signed":"1","department_category_id":"16"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5407/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] is_verified为:	1
+[INFO] expert_id为:	9203
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v2/medicallibrary/hospitals/23436
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"id":23436,"name":"中国人民解放军空军天津医院","city_id":120100,"user_visible":false,"doctor_visible":false,"created_at":"2017-04-06T10:39:02.000Z","modified_at":"2017-04-06T10:39:02.000Z","hospital_level":3,"province_id":120000,"province_name":"天津","city_name":"天津"}
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v1/doctors/5407/profiles
+[INFO] 请求数据: >>>>>  {"content":"自动化修改医生医院信息","hospital_id":"23436"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5407,"mobile":"13901989999","name":"田静elye","hospital_id":23436,"hospital_name":"中国人民解放军空军天津医院","department":"大科室lA","major_id":0,"major_name":"","academic_title":"其他","medical_title":"护师/士","inviter_no":"","inviter_name":"","province":"天津","city":"天津","is_verified":"1","date_verified":"2017-09-06 17:45:47","created_at":"2017-09-06 17:45:46","modified_at":"2017-09-06 17:45:48","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":"","doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"NONE","medical_title_list":"NURSE","city_id":120100,"create_order_time":null,"icon":null,"register_id":9203,"signed_time":"2017-09-06 17:45:47","order_count":0,"province_id":120000,"user_visible":0,"audit_time":"2017-09-06 17:45:48","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":16,"department_category_name":"其他","service_status":0}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5407/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5407,"mobile":"13901989999","name":"田静elye","hospital_id":23436,"hospital_name":"中国人民解放军空军天津医院","department":"大科室lA","major_id":0,"major_name":"","academic_title":"其他","medical_title":"护师/士","inviter_no":"","inviter_name":"","province":"天津","city":"天津","is_verified":"1","date_verified":"2017-09-06 17:45:47","created_at":"2017-09-06 17:45:46","modified_at":"2017-09-06 17:45:48","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":[],"doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"NONE","medical_title_list":"NURSE","city_id":120100,"create_order_time":null,"icon":[],"register_id":9203,"signed_time":"2017-09-06 17:45:47","order_count":0,"province_id":120000,"user_visible":0,"audit_time":"2017-09-06 17:45:48","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":16,"department_category_name":"其他","service_status":0,"staff_id":"SH0133","staff_name":"方超"}
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v1/doctors/5407/profiles
+[INFO] 请求数据: >>>>>  {"content":"自动化修改医生医院信息","hospital_id":"22877","hospital_name":"测试医院"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5407,"mobile":"13901989999","name":"田静elye","hospital_id":22877,"hospital_name":"四川攀枝花煤业（集团）有限公司总医院","department":"大科室lA","major_id":0,"major_name":"","academic_title":"其他","medical_title":"护师/士","inviter_no":"","inviter_name":"","province":"四川","city":"攀枝花","is_verified":"1","date_verified":"2017-09-06 17:45:47","created_at":"2017-09-06 17:45:46","modified_at":"2017-09-06 17:45:49","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":"","doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"NONE","medical_title_list":"NURSE","city_id":510400,"create_order_time":null,"icon":null,"register_id":9203,"signed_time":"2017-09-06 17:45:47","order_count":0,"province_id":510000,"user_visible":0,"audit_time":"2017-09-06 17:45:48","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":16,"department_category_name":"其他","service_status":0}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5407/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5407,"mobile":"13901989999","name":"田静elye","hospital_id":22877,"hospital_name":"四川攀枝花煤业（集团）有限公司总医院","department":"大科室lA","major_id":0,"major_name":"","academic_title":"其他","medical_title":"护师/士","inviter_no":"","inviter_name":"","province":"四川","city":"攀枝花","is_verified":"1","date_verified":"2017-09-06 17:45:47","created_at":"2017-09-06 17:45:46","modified_at":"2017-09-06 17:45:49","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":[],"doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"NONE","medical_title_list":"NURSE","city_id":510400,"create_order_time":null,"icon":[],"register_id":9203,"signed_time":"2017-09-06 17:45:47","order_count":0,"province_id":510000,"user_visible":0,"audit_time":"2017-09-06 17:45:48","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":16,"department_category_name":"其他","service_status":0,"staff_id":null,"staff_name":null}
+[INFO] ||	 TestCase END:	test_03_CRM更新医生详情_更新所在医院
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_04_CRM更新医生详情_更新学术职称
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13428279999 ...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13428279999"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] mobile是: 13428279999...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13428279999","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6ImE1NzRlZjE2In0.eyJ1aWQiOiI1NDA4IiwibW9iaWxlIjoiMTM0MjgyNzk5OTkiLCJleHAiOjE1MDQ3Nzc1NDksImlhdCI6MTUwNDY5MTE0OX0.YfAju0A2F7eaF79_190WTzTPgAzcMfp7oGSh49PW4i8
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13428279999
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6ImE1NzRlZjE2In0.eyJ1aWQiOiI1NDA4IiwibW9iaWxlIjoiMTM0MjgyNzk5OTkiLCJleHAiOjE1MDQ3Nzc1NDksImlhdCI6MTUwNDY5MTE0OX0.YfAju0A2F7eaF79_190WTzTPgAzcMfp7oGSh49PW4i8
+[INFO] doctorId为:	5408
+[INFO] 更新医生信息...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/v1/updatedoctorprofile
+[INFO] 请求数据: >>>>>  {"doctor":{"academic_title_list":"NONE","department":"大科室lA","doctor_card_pictures":[],"exp_list":[],"hospital_id":"57","medical_title_list":"NURSE","name":"田静elye"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor_id":"5408"}}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor":{"user_id":5408,"mobile":"13428279999","name":"\u7530\u9759elye","hospital_id":57,"hospital_name":"\u5317\u4eac\u5927\u5b66\u53e3\u8154\u533b\u9662","department":"\u5927\u79d1\u5ba4lA","major_id":"","major_name":"","academic_title":"\u5176\u4ed6","medical_title":"\u62a4\u5e08\/\u58eb","inviter_no":"","inviter_name":"","province":"\u5317\u4eac","city":"\u5317\u4eac","is_verified":"2","date_verified":"","city_id":110100,"order_count":"","province_id":110000,"academic_title_list":"NONE","medical_title_list":"NURSE","register_id":"","exp_list":[],"activated_state":1,"is_required":0,"status_count":{"agentId":{"count":0},"surgeonId":{"count":0}},"AssistantInfo":[{"id":258,"staff_id":"SH0133","name":"\u65b9\u8d85","province_id":110000,"province_name":"\u5317\u4eac","city_id":110100,"city_name":"\u5317\u4eac","distributed_begin_at":"2017-08-24 14:03:57","distributed_end_at":null,"created_at":"2017-08-24 14:03:57","modified_at":null,"status":0,"team_group":13,"avatar":"https:\/\/p.qlogo.cn\/bizmail\/qpJVGCa1G6ibN1plLTTIW9aqjUgkGvCMwibic1ch6GdLNFEIG3zwWdlbA\/0","mobile":"13817634203"}]}}}
+[INFO] doctorName为:	田静elye
+[INFO] doctorHospitalId为:	57
+[INFO] doctorHospitalName为:	北京大学口腔医院
+[INFO] 认证并同步医生...
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v3/doctors/5408/verificationsSynchronization
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"程序认证注册医生并关联到医库","is_signed":"1","department_category_id":"11"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5408/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] is_verified为:	1
+[INFO] expert_id为:	9204
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v1/doctors/5408/profiles
+[INFO] 请求数据: >>>>>  {"content":"自动化修改医生学术职称信息","academic_title":"LECTURER"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5408,"mobile":"13428279999","name":"田静elye","hospital_id":57,"hospital_name":"北京大学口腔医院","department":"大科室lA","major_id":0,"major_name":"","academic_title":"讲师","medical_title":"护师/士","inviter_no":"","inviter_name":"","province":"北京","city":"北京","is_verified":"1","date_verified":"2017-09-06 17:45:53","created_at":"2017-09-06 17:45:51","modified_at":"2017-09-06 17:45:54","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":"","doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"LECTURER","medical_title_list":"NURSE","city_id":110100,"create_order_time":null,"icon":null,"register_id":9204,"signed_time":"2017-09-06 17:45:53","order_count":0,"province_id":110000,"user_visible":0,"audit_time":"2017-09-06 17:45:53","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":11,"department_category_name":"小儿外科","service_status":0}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5408/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5408,"mobile":"13428279999","name":"田静elye","hospital_id":57,"hospital_name":"北京大学口腔医院","department":"大科室lA","major_id":0,"major_name":"","academic_title":"讲师","medical_title":"护师/士","inviter_no":"","inviter_name":"","province":"北京","city":"北京","is_verified":"1","date_verified":"2017-09-06 17:45:53","created_at":"2017-09-06 17:45:51","modified_at":"2017-09-06 17:45:54","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":[],"doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"LECTURER","medical_title_list":"NURSE","city_id":110100,"create_order_time":null,"icon":[],"register_id":9204,"signed_time":"2017-09-06 17:45:53","order_count":0,"province_id":110000,"user_visible":0,"audit_time":"2017-09-06 17:45:53","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":11,"department_category_name":"小儿外科","service_status":0,"staff_id":"SH0133","staff_name":"方超"}
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v1/doctors/5408/profiles
+[INFO] 请求数据: >>>>>  {"content":"自动化修改医生学术职称信息","academic_title":"ASSOCIATE_PROFESSOR_WRONG"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	3111001
+[INFO] [ message ]:	请选择正确医学职称
+[INFO] [ data ]:	null
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5408/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5408,"mobile":"13428279999","name":"田静elye","hospital_id":57,"hospital_name":"北京大学口腔医院","department":"大科室lA","major_id":0,"major_name":"","academic_title":"讲师","medical_title":"护师/士","inviter_no":"","inviter_name":"","province":"北京","city":"北京","is_verified":"1","date_verified":"2017-09-06 17:45:53","created_at":"2017-09-06 17:45:51","modified_at":"2017-09-06 17:45:54","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":[],"doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"LECTURER","medical_title_list":"NURSE","city_id":110100,"create_order_time":null,"icon":[],"register_id":9204,"signed_time":"2017-09-06 17:45:53","order_count":0,"province_id":110000,"user_visible":0,"audit_time":"2017-09-06 17:45:53","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":11,"department_category_name":"小儿外科","service_status":0,"staff_id":"SH0133","staff_name":"方超"}
+[INFO] ||	 TestCase END:	test_04_CRM更新医生详情_更新学术职称
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_05_CRM更新医生详情_更新技术职称
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13074829999 ...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13074829999"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] mobile是: 13074829999...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13074829999","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjA1MGY1M2I2In0.eyJ1aWQiOiI1NDA5IiwibW9iaWxlIjoiMTMwNzQ4Mjk5OTkiLCJleHAiOjE1MDQ3Nzc1NTQsImlhdCI6MTUwNDY5MTE1NH0.9acHnILzLI1dbFh418PI-2MXyLLg2-3W2JIeC55ptTc
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13074829999
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjA1MGY1M2I2In0.eyJ1aWQiOiI1NDA5IiwibW9iaWxlIjoiMTMwNzQ4Mjk5OTkiLCJleHAiOjE1MDQ3Nzc1NTQsImlhdCI6MTUwNDY5MTE1NH0.9acHnILzLI1dbFh418PI-2MXyLLg2-3W2JIeC55ptTc
+[INFO] doctorId为:	5409
+[INFO] 更新医生信息...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/v1/updatedoctorprofile
+[INFO] 请求数据: >>>>>  {"doctor":{"academic_title_list":"NONE","department":"大科室lA","doctor_card_pictures":[],"exp_list":[],"hospital_id":"57","medical_title_list":"NURSE","name":"田静elye"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor_id":"5409"}}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor":{"user_id":5409,"mobile":"13074829999","name":"\u7530\u9759elye","hospital_id":57,"hospital_name":"\u5317\u4eac\u5927\u5b66\u53e3\u8154\u533b\u9662","department":"\u5927\u79d1\u5ba4lA","major_id":"","major_name":"","academic_title":"\u5176\u4ed6","medical_title":"\u62a4\u5e08\/\u58eb","inviter_no":"","inviter_name":"","province":"\u5317\u4eac","city":"\u5317\u4eac","is_verified":"2","date_verified":"","city_id":110100,"order_count":"","province_id":110000,"academic_title_list":"NONE","medical_title_list":"NURSE","register_id":"","exp_list":[],"activated_state":1,"is_required":0,"status_count":{"agentId":{"count":0},"surgeonId":{"count":0}},"AssistantInfo":[{"id":258,"staff_id":"SH0133","name":"\u65b9\u8d85","province_id":110000,"province_name":"\u5317\u4eac","city_id":110100,"city_name":"\u5317\u4eac","distributed_begin_at":"2017-08-24 14:03:57","distributed_end_at":null,"created_at":"2017-08-24 14:03:57","modified_at":null,"status":0,"team_group":13,"avatar":"https:\/\/p.qlogo.cn\/bizmail\/qpJVGCa1G6ibN1plLTTIW9aqjUgkGvCMwibic1ch6GdLNFEIG3zwWdlbA\/0","mobile":"13817634203"}]}}}
+[INFO] doctorName为:	田静elye
+[INFO] doctorHospitalId为:	57
+[INFO] doctorHospitalName为:	北京大学口腔医院
+[INFO] 认证并同步医生...
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v3/doctors/5409/verificationsSynchronization
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"程序认证注册医生并关联到医库","is_signed":"1","department_category_id":"15"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5409/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] is_verified为:	1
+[INFO] expert_id为:	9205
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v1/doctors/5409/profiles
+[INFO] 请求数据: >>>>>  {"content":"自动化修改医生技术职称信息","medical_title":"CHIEF_TECHNICIAN"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5409,"mobile":"13074829999","name":"田静elye","hospital_id":57,"hospital_name":"北京大学口腔医院","department":"大科室lA","major_id":0,"major_name":"","academic_title":"其他","medical_title":"主任技师","inviter_no":"","inviter_name":"","province":"北京","city":"北京","is_verified":"1","date_verified":"2017-09-06 17:45:58","created_at":"2017-09-06 17:45:57","modified_at":"2017-09-06 17:45:59","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":"","doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"NONE","medical_title_list":"CHIEF_TECHNICIAN","city_id":110100,"create_order_time":null,"icon":null,"register_id":9205,"signed_time":"2017-09-06 17:45:58","order_count":0,"province_id":110000,"user_visible":0,"audit_time":"2017-09-06 17:45:59","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":15,"department_category_name":"介入治疗","service_status":0}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5409/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5409,"mobile":"13074829999","name":"田静elye","hospital_id":57,"hospital_name":"北京大学口腔医院","department":"大科室lA","major_id":0,"major_name":"","academic_title":"其他","medical_title":"主任技师","inviter_no":"","inviter_name":"","province":"北京","city":"北京","is_verified":"1","date_verified":"2017-09-06 17:45:58","created_at":"2017-09-06 17:45:57","modified_at":"2017-09-06 17:45:59","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":[],"doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"NONE","medical_title_list":"CHIEF_TECHNICIAN","city_id":110100,"create_order_time":null,"icon":[],"register_id":9205,"signed_time":"2017-09-06 17:45:58","order_count":0,"province_id":110000,"user_visible":0,"audit_time":"2017-09-06 17:45:59","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":15,"department_category_name":"介入治疗","service_status":0,"staff_id":"SH0133","staff_name":"方超"}
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v1/doctors/5409/profiles
+[INFO] 请求数据: >>>>>  {"content":"自动化修改医生技术职称信息","medical_title":"ARCHIATER_WRONG"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	3111001
+[INFO] [ message ]:	请选择正确医学职称
+[INFO] [ data ]:	null
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5409/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5409,"mobile":"13074829999","name":"田静elye","hospital_id":57,"hospital_name":"北京大学口腔医院","department":"大科室lA","major_id":0,"major_name":"","academic_title":"其他","medical_title":"主任技师","inviter_no":"","inviter_name":"","province":"北京","city":"北京","is_verified":"1","date_verified":"2017-09-06 17:45:58","created_at":"2017-09-06 17:45:57","modified_at":"2017-09-06 17:45:59","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":[],"doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"NONE","medical_title_list":"CHIEF_TECHNICIAN","city_id":110100,"create_order_time":null,"icon":[],"register_id":9205,"signed_time":"2017-09-06 17:45:58","order_count":0,"province_id":110000,"user_visible":0,"audit_time":"2017-09-06 17:45:59","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":15,"department_category_name":"介入治疗","service_status":0,"staff_id":"SH0133","staff_name":"方超"}
+[INFO] ||	 TestCase END:	test_05_CRM更新医生详情_更新技术职称
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_06_CRM更新医生详情_更新医生专业
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13033789999 ...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13033789999"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] mobile是: 13033789999...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13033789999","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjkwNjJmNDJlIn0.eyJ1aWQiOiI1NDEwIiwibW9iaWxlIjoiMTMwMzM3ODk5OTkiLCJleHAiOjE1MDQ3Nzc1NjAsImlhdCI6MTUwNDY5MTE2MH0.qPytin9szFPJauqbKhiZVWZkcRONYKMC5vM1dLvJjU4
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13033789999
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjkwNjJmNDJlIn0.eyJ1aWQiOiI1NDEwIiwibW9iaWxlIjoiMTMwMzM3ODk5OTkiLCJleHAiOjE1MDQ3Nzc1NjAsImlhdCI6MTUwNDY5MTE2MH0.qPytin9szFPJauqbKhiZVWZkcRONYKMC5vM1dLvJjU4
+[INFO] doctorId为:	5410
+[INFO] 更新医生信息...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/v1/updatedoctorprofile
+[INFO] 请求数据: >>>>>  {"doctor":{"academic_title_list":"NONE","department":"大科室lA","doctor_card_pictures":[],"exp_list":[],"hospital_id":"57","medical_title_list":"NURSE","name":"田静elye"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor_id":"5410"}}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor":{"user_id":5410,"mobile":"13033789999","name":"\u7530\u9759elye","hospital_id":57,"hospital_name":"\u5317\u4eac\u5927\u5b66\u53e3\u8154\u533b\u9662","department":"\u5927\u79d1\u5ba4lA","major_id":"","major_name":"","academic_title":"\u5176\u4ed6","medical_title":"\u62a4\u5e08\/\u58eb","inviter_no":"","inviter_name":"","province":"\u5317\u4eac","city":"\u5317\u4eac","is_verified":"2","date_verified":"","city_id":110100,"order_count":"","province_id":110000,"academic_title_list":"NONE","medical_title_list":"NURSE","register_id":"","exp_list":[],"activated_state":1,"is_required":0,"status_count":{"agentId":{"count":0},"surgeonId":{"count":0}},"AssistantInfo":[{"id":258,"staff_id":"SH0133","name":"\u65b9\u8d85","province_id":110000,"province_name":"\u5317\u4eac","city_id":110100,"city_name":"\u5317\u4eac","distributed_begin_at":"2017-08-24 14:03:57","distributed_end_at":null,"created_at":"2017-08-24 14:03:57","modified_at":null,"status":0,"team_group":13,"avatar":"https:\/\/p.qlogo.cn\/bizmail\/qpJVGCa1G6ibN1plLTTIW9aqjUgkGvCMwibic1ch6GdLNFEIG3zwWdlbA\/0","mobile":"13817634203"}]}}}
+[INFO] doctorName为:	田静elye
+[INFO] doctorHospitalId为:	57
+[INFO] doctorHospitalName为:	北京大学口腔医院
+[INFO] 认证并同步医生...
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v3/doctors/5410/verificationsSynchronization
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"程序认证注册医生并关联到医库","is_signed":"1","department_category_id":"15"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5410/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] is_verified为:	1
+[INFO] expert_id为:	9206
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v1/doctors/5410/profiles
+[INFO] 请求数据: >>>>>  {"content":"自动化修改医生专业信息","major_id":"96"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5410,"mobile":"13033789999","name":"田静elye","hospital_id":57,"hospital_name":"北京大学口腔医院","department":"大科室lA","major_id":96,"major_name":"血管病变","academic_title":"其他","medical_title":"护师/士","inviter_no":"","inviter_name":"","province":"北京","city":"北京","is_verified":"1","date_verified":"2017-09-06 17:46:03","created_at":"2017-09-06 17:46:02","modified_at":"2017-09-06 17:46:04","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":"","doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"NONE","medical_title_list":"NURSE","city_id":110100,"create_order_time":null,"icon":null,"register_id":9206,"signed_time":"2017-09-06 17:46:03","order_count":0,"province_id":110000,"user_visible":0,"audit_time":"2017-09-06 17:46:04","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":15,"department_category_name":"介入治疗","service_status":0}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5410/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5410,"mobile":"13033789999","name":"田静elye","hospital_id":57,"hospital_name":"北京大学口腔医院","department":"大科室lA","major_id":96,"major_name":"血管病变","academic_title":"其他","medical_title":"护师/士","inviter_no":"","inviter_name":"","province":"北京","city":"北京","is_verified":"1","date_verified":"2017-09-06 17:46:03","created_at":"2017-09-06 17:46:02","modified_at":"2017-09-06 17:46:04","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":[],"doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"NONE","medical_title_list":"NURSE","city_id":110100,"create_order_time":null,"icon":[],"register_id":9206,"signed_time":"2017-09-06 17:46:03","order_count":0,"province_id":110000,"user_visible":0,"audit_time":"2017-09-06 17:46:04","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":15,"department_category_name":"介入治疗","service_status":0,"staff_id":"SH0133","staff_name":"方超"}
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v1/doctors/5410/profiles
+[INFO] 请求数据: >>>>>  {"content":"自动化修改医生专业信息","major_id":"1000000"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	2211001
+[INFO] [ message ]:	参数错误
+[INFO] [ data ]:	null
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5410/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5410,"mobile":"13033789999","name":"田静elye","hospital_id":57,"hospital_name":"北京大学口腔医院","department":"大科室lA","major_id":96,"major_name":"血管病变","academic_title":"其他","medical_title":"护师/士","inviter_no":"","inviter_name":"","province":"北京","city":"北京","is_verified":"1","date_verified":"2017-09-06 17:46:03","created_at":"2017-09-06 17:46:02","modified_at":"2017-09-06 17:46:04","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":[],"doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"NONE","medical_title_list":"NURSE","city_id":110100,"create_order_time":null,"icon":[],"register_id":9206,"signed_time":"2017-09-06 17:46:03","order_count":0,"province_id":110000,"user_visible":0,"audit_time":"2017-09-06 17:46:04","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":15,"department_category_name":"介入治疗","service_status":0,"staff_id":"SH0133","staff_name":"方超"}
+[INFO] ||	 TestCase END:	test_06_CRM更新医生详情_更新医生专业
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_08_CRM更新医生详情_更新医生工牌照
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13164469999 ...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13164469999"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] mobile是: 13164469999...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13164469999","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjgwNGJjZjIyIn0.eyJ1aWQiOiI1NDExIiwibW9iaWxlIjoiMTMxNjQ0Njk5OTkiLCJleHAiOjE1MDQ3Nzc1NjUsImlhdCI6MTUwNDY5MTE2NX0.9bg-E2Uvszk_TQIZ9x3slnP2c-naRzzAtfi624emjvI
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13164469999
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjgwNGJjZjIyIn0.eyJ1aWQiOiI1NDExIiwibW9iaWxlIjoiMTMxNjQ0Njk5OTkiLCJleHAiOjE1MDQ3Nzc1NjUsImlhdCI6MTUwNDY5MTE2NX0.9bg-E2Uvszk_TQIZ9x3slnP2c-naRzzAtfi624emjvI
+[INFO] doctorId为:	5411
+[INFO] 更新医生信息...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/v1/updatedoctorprofile
+[INFO] 请求数据: >>>>>  {"doctor":{"academic_title_list":"NONE","department":"大科室lA","doctor_card_pictures":[],"exp_list":[],"hospital_id":"57","medical_title_list":"NURSE","name":"田静elye"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor_id":"5411"}}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor":{"user_id":5411,"mobile":"13164469999","name":"\u7530\u9759elye","hospital_id":57,"hospital_name":"\u5317\u4eac\u5927\u5b66\u53e3\u8154\u533b\u9662","department":"\u5927\u79d1\u5ba4lA","major_id":"","major_name":"","academic_title":"\u5176\u4ed6","medical_title":"\u62a4\u5e08\/\u58eb","inviter_no":"","inviter_name":"","province":"\u5317\u4eac","city":"\u5317\u4eac","is_verified":"2","date_verified":"","city_id":110100,"order_count":"","province_id":110000,"academic_title_list":"NONE","medical_title_list":"NURSE","register_id":"","exp_list":[],"activated_state":1,"is_required":0,"status_count":{"agentId":{"count":0},"surgeonId":{"count":0}},"AssistantInfo":[{"id":258,"staff_id":"SH0133","name":"\u65b9\u8d85","province_id":110000,"province_name":"\u5317\u4eac","city_id":110100,"city_name":"\u5317\u4eac","distributed_begin_at":"2017-08-24 14:03:57","distributed_end_at":null,"created_at":"2017-08-24 14:03:57","modified_at":null,"status":0,"team_group":13,"avatar":"https:\/\/p.qlogo.cn\/bizmail\/qpJVGCa1G6ibN1plLTTIW9aqjUgkGvCMwibic1ch6GdLNFEIG3zwWdlbA\/0","mobile":"13817634203"}]}}}
+[INFO] doctorName为:	田静elye
+[INFO] doctorHospitalId为:	57
+[INFO] doctorHospitalName为:	北京大学口腔医院
+[INFO] 认证并同步医生...
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v3/doctors/5411/verificationsSynchronization
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"程序认证注册医生并关联到医库","is_signed":"1","department_category_id":"16"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5411/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] is_verified为:	1
+[INFO] expert_id为:	9207
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v1/doctors/5411/profiles
+[INFO] 请求数据: >>>>>  {"content":"自动化修改医生工牌照信息","doctor_card_pictures":[{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg","type":"3"},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102738.jpg","type":"3"},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102739.jpg","type":"3"},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102736.jpg","type":"3"}]}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5411,"mobile":"13164469999","name":"田静elye","hospital_id":57,"hospital_name":"北京大学口腔医院","department":"大科室lA","major_id":0,"major_name":"","academic_title":"其他","medical_title":"护师/士","inviter_no":"","inviter_name":"","province":"北京","city":"北京","is_verified":"1","date_verified":"2017-09-06 17:46:08","created_at":"2017-09-06 17:46:07","modified_at":"2017-09-06 17:46:09","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":[{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102738.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102739.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102736.jpg"}],"doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"NONE","medical_title_list":"NURSE","city_id":110100,"create_order_time":null,"icon":null,"register_id":9207,"signed_time":"2017-09-06 17:46:08","order_count":0,"province_id":110000,"user_visible":0,"audit_time":"2017-09-06 17:46:09","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":16,"department_category_name":"其他","service_status":0}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5411/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5411,"mobile":"13164469999","name":"田静elye","hospital_id":57,"hospital_name":"北京大学口腔医院","department":"大科室lA","major_id":0,"major_name":"","academic_title":"其他","medical_title":"护师/士","inviter_no":"","inviter_name":"","province":"北京","city":"北京","is_verified":"1","date_verified":"2017-09-06 17:46:08","created_at":"2017-09-06 17:46:07","modified_at":"2017-09-06 17:46:09","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":[{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg","type":"3","thumbnailPicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg?imageMogr2/auto-orient/format/jpg/size-limit/204800&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:So9q2CFsjdKxoB_6tzQa79ggqlA=","largePicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg?imageMogr2/auto-orient/format/jpg/interlace/1&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:jmq9oHeVn6JQNS5wEYjVgmuy1s4="},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102738.jpg","type":"3","thumbnailPicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102738.jpg?imageMogr2/auto-orient/format/jpg/size-limit/204800&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:cKi5IBKvMtwSn_2trc0-H7J-45w=","largePicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102738.jpg?imageMogr2/auto-orient/format/jpg/interlace/1&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:awGzLYvR7RsCfdaaxoJXjL9ezbU="},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102739.jpg","type":"3","thumbnailPicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102739.jpg?imageMogr2/auto-orient/format/jpg/size-limit/204800&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:5wyTUxhqa1Cw6N7jLcyhByPTQOA=","largePicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102739.jpg?imageMogr2/auto-orient/format/jpg/interlace/1&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:BFZ1BM-Te2s1Ce6dbSH5RUC61aU="},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102736.jpg","type":"3","thumbnailPicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102736.jpg?imageMogr2/auto-orient/format/jpg/size-limit/204800&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:Iu1iRbMImltpVOWPjFjHdrlPx-4=","largePicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102736.jpg?imageMogr2/auto-orient/format/jpg/interlace/1&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:T37f0lFQKjhViIerUzwRUYpODSI="}],"doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"NONE","medical_title_list":"NURSE","city_id":110100,"create_order_time":null,"icon":[],"register_id":9207,"signed_time":"2017-09-06 17:46:08","order_count":0,"province_id":110000,"user_visible":0,"audit_time":"2017-09-06 17:46:09","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":16,"department_category_name":"其他","service_status":0,"staff_id":"SH0133","staff_name":"方超"}
+[INFO] doctor_card_pictures的长度为: 4
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v1/doctors/5411/profiles
+[INFO] 请求数据: >>>>>  {"content":"自动化修改医生工牌照信息","doctor_card_pictures":[{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg","type":"3"},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102738.jpg","type":"3"},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102739.jpg","type":"3"},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102736.jpg","type":"3"},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102740.jpg","type":"3"}]}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5411,"mobile":"13164469999","name":"田静elye","hospital_id":57,"hospital_name":"北京大学口腔医院","department":"大科室lA","major_id":0,"major_name":"","academic_title":"其他","medical_title":"护师/士","inviter_no":"","inviter_name":"","province":"北京","city":"北京","is_verified":"1","date_verified":"2017-09-06 17:46:08","created_at":"2017-09-06 17:46:07","modified_at":"2017-09-06 17:46:10","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":[{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102738.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102739.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102736.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102740.jpg"}],"doctor_card_pictures_deleted":"","experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"NONE","medical_title_list":"NURSE","city_id":110100,"create_order_time":null,"icon":null,"register_id":9207,"signed_time":"2017-09-06 17:46:08","order_count":0,"province_id":110000,"user_visible":0,"audit_time":"2017-09-06 17:46:09","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":16,"department_category_name":"其他","service_status":0}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5411/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5411,"mobile":"13164469999","name":"田静elye","hospital_id":57,"hospital_name":"北京大学口腔医院","department":"大科室lA","major_id":0,"major_name":"","academic_title":"其他","medical_title":"护师/士","inviter_no":"","inviter_name":"","province":"北京","city":"北京","is_verified":"1","date_verified":"2017-09-06 17:46:08","created_at":"2017-09-06 17:46:07","modified_at":"2017-09-06 17:46:10","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":[{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg","type":"3","thumbnailPicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg?imageMogr2/auto-orient/format/jpg/size-limit/204800&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:So9q2CFsjdKxoB_6tzQa79ggqlA=","largePicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg?imageMogr2/auto-orient/format/jpg/interlace/1&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:jmq9oHeVn6JQNS5wEYjVgmuy1s4="},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102738.jpg","type":"3","thumbnailPicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102738.jpg?imageMogr2/auto-orient/format/jpg/size-limit/204800&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:cKi5IBKvMtwSn_2trc0-H7J-45w=","largePicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102738.jpg?imageMogr2/auto-orient/format/jpg/interlace/1&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:awGzLYvR7RsCfdaaxoJXjL9ezbU="},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102739.jpg","type":"3","thumbnailPicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102739.jpg?imageMogr2/auto-orient/format/jpg/size-limit/204800&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:5wyTUxhqa1Cw6N7jLcyhByPTQOA=","largePicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102739.jpg?imageMogr2/auto-orient/format/jpg/interlace/1&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:BFZ1BM-Te2s1Ce6dbSH5RUC61aU="},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102736.jpg","type":"3","thumbnailPicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102736.jpg?imageMogr2/auto-orient/format/jpg/size-limit/204800&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:Iu1iRbMImltpVOWPjFjHdrlPx-4=","largePicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102736.jpg?imageMogr2/auto-orient/format/jpg/interlace/1&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:T37f0lFQKjhViIerUzwRUYpODSI="},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102740.jpg","type":"3","thumbnailPicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102740.jpg?imageMogr2/auto-orient/format/jpg/size-limit/204800&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:8m4pB3fAZzGvisWZP1CfHBHu24s=","largePicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102740.jpg?imageMogr2/auto-orient/format/jpg/interlace/1&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:AEgZGvReQQ5N-WRuG-_jacDPcgs="}],"doctor_card_pictures_deleted":"","experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"NONE","medical_title_list":"NURSE","city_id":110100,"create_order_time":null,"icon":[],"register_id":9207,"signed_time":"2017-09-06 17:46:08","order_count":0,"province_id":110000,"user_visible":0,"audit_time":"2017-09-06 17:46:09","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":16,"department_category_name":"其他","service_status":0,"staff_id":"SH0133","staff_name":"方超"}
+[INFO] doctor_card_pictures的长度为: 5
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v1/doctors/5411/profiles
+[INFO] 请求数据: >>>>>  {"content":"自动化修改医生工牌照信息","doctor_card_pictures":[{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg","type":"3"},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102738.jpg","type":"3"},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102739.jpg","type":"3"},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102736.jpg","type":"3"},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102740.jpg","type":"3"},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102741.jpg","type":"3"}]}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5411,"mobile":"13164469999","name":"田静elye","hospital_id":57,"hospital_name":"北京大学口腔医院","department":"大科室lA","major_id":0,"major_name":"","academic_title":"其他","medical_title":"护师/士","inviter_no":"","inviter_name":"","province":"北京","city":"北京","is_verified":"1","date_verified":"2017-09-06 17:46:08","created_at":"2017-09-06 17:46:07","modified_at":"2017-09-06 17:46:10","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":[{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102738.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102739.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102736.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102740.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102741.jpg"}],"doctor_card_pictures_deleted":"","experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"NONE","medical_title_list":"NURSE","city_id":110100,"create_order_time":null,"icon":null,"register_id":9207,"signed_time":"2017-09-06 17:46:08","order_count":0,"province_id":110000,"user_visible":0,"audit_time":"2017-09-06 17:46:09","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":16,"department_category_name":"其他","service_status":0}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5411/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5411,"mobile":"13164469999","name":"田静elye","hospital_id":57,"hospital_name":"北京大学口腔医院","department":"大科室lA","major_id":0,"major_name":"","academic_title":"其他","medical_title":"护师/士","inviter_no":"","inviter_name":"","province":"北京","city":"北京","is_verified":"1","date_verified":"2017-09-06 17:46:08","created_at":"2017-09-06 17:46:07","modified_at":"2017-09-06 17:46:10","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":[{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg","type":"3","thumbnailPicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg?imageMogr2/auto-orient/format/jpg/size-limit/204800&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:So9q2CFsjdKxoB_6tzQa79ggqlA=","largePicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg?imageMogr2/auto-orient/format/jpg/interlace/1&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:jmq9oHeVn6JQNS5wEYjVgmuy1s4="},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102738.jpg","type":"3","thumbnailPicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102738.jpg?imageMogr2/auto-orient/format/jpg/size-limit/204800&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:cKi5IBKvMtwSn_2trc0-H7J-45w=","largePicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102738.jpg?imageMogr2/auto-orient/format/jpg/interlace/1&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:awGzLYvR7RsCfdaaxoJXjL9ezbU="},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102739.jpg","type":"3","thumbnailPicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102739.jpg?imageMogr2/auto-orient/format/jpg/size-limit/204800&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:5wyTUxhqa1Cw6N7jLcyhByPTQOA=","largePicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102739.jpg?imageMogr2/auto-orient/format/jpg/interlace/1&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:BFZ1BM-Te2s1Ce6dbSH5RUC61aU="},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102736.jpg","type":"3","thumbnailPicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102736.jpg?imageMogr2/auto-orient/format/jpg/size-limit/204800&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:Iu1iRbMImltpVOWPjFjHdrlPx-4=","largePicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102736.jpg?imageMogr2/auto-orient/format/jpg/interlace/1&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:T37f0lFQKjhViIerUzwRUYpODSI="},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102740.jpg","type":"3","thumbnailPicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102740.jpg?imageMogr2/auto-orient/format/jpg/size-limit/204800&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:8m4pB3fAZzGvisWZP1CfHBHu24s=","largePicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102740.jpg?imageMogr2/auto-orient/format/jpg/interlace/1&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:AEgZGvReQQ5N-WRuG-_jacDPcgs="},{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102741.jpg","type":"3","thumbnailPicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102741.jpg?imageMogr2/auto-orient/format/jpg/size-limit/204800&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:jzm_uO_Ba252DEJhs7XOpjHJyug=","largePicture":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102741.jpg?imageMogr2/auto-orient/format/jpg/interlace/1&e=1504691470&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:Hsj28FkNu0FOXEFIKuv5PqxNOAI="}],"doctor_card_pictures_deleted":"","experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"NONE","medical_title_list":"NURSE","city_id":110100,"create_order_time":null,"icon":[],"register_id":9207,"signed_time":"2017-09-06 17:46:08","order_count":0,"province_id":110000,"user_visible":0,"audit_time":"2017-09-06 17:46:09","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":16,"department_category_name":"其他","service_status":0,"staff_id":"SH0133","staff_name":"方超"}
+[INFO] doctor_card_pictures的长度为: 6
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v1/doctors/5411/profiles
+[INFO] 请求数据: >>>>>  {"content":"自动化修改医生工牌照信息","doctor_card_pictures":[]}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5411,"mobile":"13164469999","name":"田静elye","hospital_id":57,"hospital_name":"北京大学口腔医院","department":"大科室lA","major_id":0,"major_name":"","academic_title":"其他","medical_title":"护师/士","inviter_no":"","inviter_name":"","province":"北京","city":"北京","is_verified":"1","date_verified":"2017-09-06 17:46:08","created_at":"2017-09-06 17:46:07","modified_at":"2017-09-06 17:46:11","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":"","doctor_card_pictures_deleted":[{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102738.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102739.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102736.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102740.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102741.jpg"}],"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"NONE","medical_title_list":"NURSE","city_id":110100,"create_order_time":null,"icon":null,"register_id":9207,"signed_time":"2017-09-06 17:46:08","order_count":0,"province_id":110000,"user_visible":0,"audit_time":"2017-09-06 17:46:09","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":16,"department_category_name":"其他","service_status":0}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5411/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5411,"mobile":"13164469999","name":"田静elye","hospital_id":57,"hospital_name":"北京大学口腔医院","department":"大科室lA","major_id":0,"major_name":"","academic_title":"其他","medical_title":"护师/士","inviter_no":"","inviter_name":"","province":"北京","city":"北京","is_verified":"1","date_verified":"2017-09-06 17:46:08","created_at":"2017-09-06 17:46:07","modified_at":"2017-09-06 17:46:11","is_famous":0,"signed_status":"SIGNED","doctor_card_pictures":[],"doctor_card_pictures_deleted":[{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102738.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102739.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102736.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102740.jpg"},{"type":"3","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102741.jpg"}],"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"NONE","medical_title_list":"NURSE","city_id":110100,"create_order_time":null,"icon":[],"register_id":9207,"signed_time":"2017-09-06 17:46:08","order_count":0,"province_id":110000,"user_visible":0,"audit_time":"2017-09-06 17:46:09","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":16,"department_category_name":"其他","service_status":0,"staff_id":"SH0133","staff_name":"方超"}
+[INFO] ||	 TestCase END:	test_08_CRM更新医生详情_更新医生工牌照
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] ============================================================================================================= 
+[INFO] ||    TestAPI END:	RegisteredDoctor_Modify
+[INFO] ============================================================================================================= 
+

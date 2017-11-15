@@ -1,0 +1,57 @@
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+[INFO] //    TestAPI START:	SurgeryCategory
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_01_有token信息的请求可以获得有效信息
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13999922225 ...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13999922225"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] mobile是: 13999922225...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13999922225","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjI3ZmI4MjdjIn0.eyJ1aWQiOiI0OTk4IiwibW9iaWxlIjoiMTM5OTk5MjIyMjUiLCJleHAiOjE1MDQxNjIyOTAsImlhdCI6MTUwNDA3NTg5MH0.wHsIKb7TJwwwP78RdAzHvre_e4OHERffxhXccPGy6No
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13999922225
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjI3ZmI4MjdjIn0.eyJ1aWQiOiI0OTk4IiwibW9iaWxlIjoiMTM5OTk5MjIyMjUiLCJleHAiOjE1MDQxNjIyOTAsImlhdCI6MTUwNDA3NTg5MH0.wHsIKb7TJwwwP78RdAzHvre_e4OHERffxhXccPGy6No
+[INFO] doctorId为:	4998
+[INFO] 更新医生信息...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/v1/updatedoctorprofile
+[INFO] 请求数据: >>>>>  {"doctor":{"academic_title_list":"PROFESSOR","department":"大科室kb","doctor_card_pictures":[],"exp_list":[],"hospital_id":"57","inviter_no":"SH0133","major_id":"92","medical_title_list":"SUPERVISOR_TECHNICIAN","name":"田静cIfH"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] doctorName为:	田静cIfH
+[INFO] doctorHospitalId为:	57
+[INFO] doctorHospitalName为:	北京大学口腔医院
+[INFO] 认证并同步医生...
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v2/doctors/4998/verificationssynchronization
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"程序认证注册医生并关联到医库","is_signed":"1"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/4998/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] is_verified为:	1
+[INFO] expert_id为:	8811
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/getsurgerycategory
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"surgeryCategories":[{"root":"普外科","root_id":1,"branch":[{"id":1,"parent_category_id":1,"name":"肛肠手术"},{"id":2,"parent_category_id":1,"name":"胃肠手术"},{"id":3,"parent_category_id":1,"name":"小肠手术"},{"id":4,"parent_category_id":1,"name":"腹壁手术"},{"id":5,"parent_category_id":1,"name":"乳房手术"},{"id":6,"parent_category_id":1,"name":"血管手术"},{"id":7,"parent_category_id":1,"name":"肝胆胰脾手术"},{"id":8,"parent_category_id":1,"name":"颈部手术"},{"id":9,"parent_category_id":1,"name":"其他手术"}]},{"root":"骨科","root_id":2,"branch":[{"id":10,"parent_category_id":2,"name":"创伤骨科"},{"id":11,"parent_category_id":2,"name":"关节外科"},{"id":12,"parent_category_id":2,"name":"其他疾病"},{"id":13,"parent_category_id":2,"name":"脊柱外科"},{"id":14,"parent_category_id":2,"name":"骨肿瘤"},{"id":15,"parent_category_id":2,"name":"手外科"},{"id":16,"parent_category_id":2,"name":"足踝外科"},{"id":17,"parent_category_id":2,"name":"先天畸形"}]},{"root":"神经外科","root_id":3,"branch":[{"id":18,"parent_category_id":3,"name":"神经介入"},{"id":19,"parent_category_id":3,"name":"颅内及椎管内肿瘤"},{"id":20,"parent_category_id":3,"name":"颅脑及脊髓损伤"},{"id":21,"parent_category_id":3,"name":"颅内及椎管内血管性疾病"},{"id":22,"parent_category_id":3,"name":"其他手术"},{"id":23,"parent_category_id":3,"name":"颅脑及脊髓先天性畸形"}]},{"root":"泌尿外科","root_id":4,"branch":[{"id":24,"parent_category_id":4,"name":"阴囊及其内容物手术"},{"id":25,"parent_category_id":4,"name":"包皮及阴茎手术"},{"id":26,"parent_category_id":4,"name":"女性尿道手术"},{"id":27,"parent_category_id":4,"name":"男性尿道手术"},{"id":28,"parent_category_id":4,"name":"前列腺手术"},{"id":29,"parent_category_id":4,"name":"膀胱手术"},{"id":30,"parent_category_id":4,"name":"输尿管手术"},{"id":31,"parent_category_id":4,"name":"肾脏手术"},{"id":32,"parent_category_id":4,"name":"泌尿外科腹腔镜手术"},{"id":33,"parent_category_id":4,"name":"腔道泌尿外科手术"},{"id":34,"parent_category_id":4,"name":"肠道和大网膜在泌尿外..."},{"id":35,"parent_category_id":4,"name":"肾上腺手术"}]},{"root":"胸心外科","root_id":5,"branch":[{"id":36,"parent_category_id":5,"name":"纵隔手术"},{"id":37,"parent_category_id":5,"name":"其他手术"},{"id":38,"parent_category_id":5,"name":"食管手术"},{"id":39,"parent_category_id":5,"name":"气管及肺手术"},{"id":40,"parent_category_id":5,"name":"先天性心脏病"},{"id":41,"parent_category_id":5,"name":"后天性心脏病"},{"id":42,"parent_category_id":5,"name":"胸主动脉疾病"},{"id":43,"parent_category_id":5,"name":"心脏大血管创伤"},{"id":44,"parent_category_id":5,"name":"心脏移植"}]},{"root":"整形烧伤科","root_id":6,"branch":[{"id":45,"parent_category_id":6,"name":"美容整形手术"},{"id":46,"parent_category_id":6,"name":"烧伤相关手术"},{"id":47,"parent_category_id":6,"name":"躯干及四肢畸形"},{"id":48,"parent_category_id":6,"name":"组织移植"},{"id":49,"parent_category_id":6,"name":"头颈部畸形"},{"id":50,"parent_category_id":6,"name":"皮肤软组织手术"},{"id":51,"parent_category_id":6,"name":"整形外科内镜技术"}]},{"root":"眼科","root_id":7,"branch":[{"id":52,"parent_category_id":7,"name":"玻璃体手术"},{"id":53,"parent_category_id":7,"name":"视网膜脱离手术"},{"id":54,"parent_category_id":7,"name":"眼病的激光手术治疗"},{"id":55,"parent_category_id":7,"name":"青光眼手术"},{"id":56,"parent_category_id":7,"name":"角膜手术"},{"id":57,"parent_category_id":7,"name":"晶状体手术"},{"id":58,"parent_category_id":7,"name":"眼肌手术"},{"id":59,"parent_category_id":7,"name":"结膜手术"},{"id":60,"parent_category_id":7,"name":"泪器手术"},{"id":61,"parent_category_id":7,"name":"眼眶手术"},{"id":62,"parent_category_id":7,"name":"眼球手术"},{"id":63,"parent_category_id":7,"name":"眼外伤手术"},{"id":64,"parent_category_id":7,"name":"眼睑手术"}]},{"root":"耳鼻喉科","root_id":8,"branch":[{"id":65,"parent_category_id":8,"name":"头颈手术"},{"id":66,"parent_category_id":8,"name":"内镜手术"},{"id":67,"parent_category_id":8,"name":"喉手术"},{"id":68,"parent_category_id":8,"name":"咽手术"},{"id":69,"parent_category_id":8,"name":"鼻和鼻窦手术"},{"id":70,"parent_category_id":8,"name":"内耳及听神经、面神经..."},{"id":71,"parent_category_id":8,"name":"中耳手术"},{"id":72,"parent_category_id":8,"name":"外耳手术"}]},{"root":"口腔科","root_id":9,"branch":[{"id":73,"parent_category_id":9,"name":"口腔颌面手术"},{"id":74,"parent_category_id":9,"name":"整形修复手术"},{"id":75,"parent_category_id":9,"name":"颅底外科手术"},{"id":76,"parent_category_id":9,"name":"颅面外科手术"},{"id":77,"parent_category_id":9,"name":"正颌外科手术"},{"id":78,"parent_category_id":9,"name":"拔牙术及牙槽外科"}]},{"root":"妇产科","root_id":10,"branch":[{"id":79,"parent_category_id":10,"name":"妇产科介入性手术"},{"id":80,"parent_category_id":10,"name":"妇产科内镜"},{"id":81,"parent_category_id":10,"name":"计划生育手术"},{"id":82,"parent_category_id":10,"name":"妇科手术"},{"id":83,"parent_category_id":10,"name":"产前诊断性手术"},{"id":84,"parent_category_id":10,"name":"产科手术"}]},{"root":"小儿外科","root_id":11,"branch":[{"id":85,"parent_category_id":11,"name":"小儿普外"},{"id":86,"parent_category_id":11,"name":"小儿泌外"},{"id":87,"parent_category_id":11,"name":"小儿骨外"},{"id":88,"parent_category_id":11,"name":"小儿胸外"}]},{"root":"介入科","root_id":12,"branch":[{"id":89,"parent_category_id":12,"name":"介入科"}]}]}
+[INFO] surgeryCategories的长度为: 12
+[INFO] branch的长度为: 9
+[INFO] ||	 TestCase END:	test_01_有token信息的请求可以获得有效信息
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] ============================================================================================================= 
+[INFO] ||    TestAPI END:	SurgeryCategory
+[INFO] ============================================================================================================= 
+

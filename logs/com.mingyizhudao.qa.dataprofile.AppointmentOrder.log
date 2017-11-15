@@ -1,0 +1,40 @@
+[INFO] 请求验证码到手机号13328569999 ...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/edge-gateway/appointment/api/v1/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13328569999"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile是: 13328569999...请发送验证码到服务器进行验证
+[INFO] 请求验证码到手机号13917709999 ...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/edge-gateway/appointment/api/v1/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13917709999"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile是: 13917709999...请发送验证码到服务器进行验证
+[INFO] 请求验证码到手机号13051079999 ...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/edge-gateway/appointment/api/v1/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13051079999"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile是: 13051079999...请发送验证码到服务器进行验证
+[INFO] 请求验证码到手机号13789109999 ...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/edge-gateway/appointment/api/v1/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13789109999"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile是: 13789109999...请发送验证码到服务器进行验证
+[INFO] 请求验证码到手机号13547029999 ...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/edge-gateway/appointment/api/v1/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13547029999"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile是: 13547029999...请发送验证码到服务器进行验证
+[INFO] 请求验证码到手机号13398619999 ...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/edge-gateway/appointment/api/v1/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13398619999"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile是: 13398619999...请发送验证码到服务器进行验证
+[INFO] 请求验证码到手机号13266309999 ...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/edge-gateway/appointment/api/v1/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13266309999"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile是: 13266309999...请发送验证码到服务器进行验证
+[INFO] 请求验证码到手机号13051799999 ...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/edge-gateway/appointment/api/v1/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13051799999"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile是: 13051799999...请发送验证码到服务器进行验证

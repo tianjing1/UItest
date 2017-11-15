@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [doctor]">
+  <test name="doctor(failed)">
+    <groups>
+      <run>
+        <include name="pending"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.mingyizhudao.qa.functiontest.doctor.CreateDesignatedOrder">
+        <methods>
+          <include name="test_01_指定医生创建待处理的订单"/>
+        </methods>
+      </class> <!-- com.mingyizhudao.qa.functiontest.doctor.CreateDesignatedOrder -->
+    </classes>
+  </test> <!-- doctor(failed) -->
+</suite> <!-- Failed suite [doctor] -->

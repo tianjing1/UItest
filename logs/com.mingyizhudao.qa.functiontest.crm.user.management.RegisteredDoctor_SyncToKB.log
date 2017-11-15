@@ -1,0 +1,183 @@
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+[INFO] //    TestAPI START:	RegisteredDoctor_SyncToKB
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_01_已认证医生_同步到医库_新增
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13492159999 ...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13492159999"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] mobile是: 13492159999...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13492159999","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6ImI3YzEyZTgzIn0.eyJ1aWQiOiI1MzkyIiwibW9iaWxlIjoiMTM0OTIxNTk5OTkiLCJleHAiOjE1MDQ3NzY3NDAsImlhdCI6MTUwNDY5MDM0MH0.xCc1iKVMEp7jnotFZMwUqhHMT4ABYNz05FLuBs8ZzZ4
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13492159999
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6ImI3YzEyZTgzIn0.eyJ1aWQiOiI1MzkyIiwibW9iaWxlIjoiMTM0OTIxNTk5OTkiLCJleHAiOjE1MDQ3NzY3NDAsImlhdCI6MTUwNDY5MDM0MH0.xCc1iKVMEp7jnotFZMwUqhHMT4ABYNz05FLuBs8ZzZ4
+[INFO] doctorId为:	5392
+[INFO] 更新医生信息...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/v1/updatedoctorprofile
+[INFO] 请求数据: >>>>>  {"doctor":{"academic_title_list":"PROFESSOR","department":"大科室JF","doctor_card_pictures":[],"exp_list":[],"hospital_id":"480","medical_title_list":"ASSOCIATE_ARCHIATER","name":"田静GMKn"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor_id":"5392"}}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor":{"user_id":5392,"mobile":"13492159999","name":"\u7530\u9759GMKn","hospital_id":480,"hospital_name":"\u9075\u4e49\u533b\u5b66\u9662\u9644\u5c5e\u53e3\u8154\u533b\u9662","department":"\u5927\u79d1\u5ba4JF","major_id":"","major_name":"","academic_title":"\u6559\u6388","medical_title":"\u526f\u4e3b\u4efb\u533b\u5e08","inviter_no":"","inviter_name":"","province":"\u8d35\u5dde","city":"\u9075\u4e49","is_verified":"2","date_verified":"","city_id":520300,"order_count":"","province_id":520000,"academic_title_list":"PROFESSOR","medical_title_list":"ASSOCIATE_ARCHIATER","register_id":"","exp_list":[],"activated_state":1,"is_required":0,"status_count":{"agentId":{"count":0},"surgeonId":{"count":0}},"AssistantInfo":[]}}}
+[INFO] doctorName为:	田静GMKn
+[INFO] doctorHospitalId为:	480
+[INFO] doctorHospitalName为:	遵义医学院附属口腔医院
+[INFO] 认证医生...
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v2/doctors/5392/verifications
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"原因"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5392/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v2/doctors/5392/verifications
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"原因"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5392/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] is_verified为:	1
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v1/doctors/5392/synchronization
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"单独同步"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"user_id":5392,"mobile":"13492159999","name":"田静GMKn","hospital_id":480,"hospital_name":"遵义医学院附属口腔医院","department":"大科室JF","major_id":0,"major_name":"","academic_title":"教授","medical_title":"副主任医师","inviter_no":"","inviter_name":"","province":"贵州","city":"遵义","is_verified":"1","date_verified":"2017-09-06 17:32:23","created_at":"2017-09-06 17:32:22","modified_at":"2017-09-06 17:32:25","is_famous":0,"signed_status":"NOT_SIGNED","doctor_card_pictures":"","doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"PROFESSOR","medical_title_list":"ASSOCIATE_ARCHIATER","city_id":520300,"create_order_time":null,"icon":null,"register_id":9193,"signed_time":null,"order_count":0,"province_id":520000,"user_visible":0,"audit_time":"2017-09-06 17:32:25","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":null,"department_category_name":null,"service_status":0}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5392/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5392,"mobile":"13492159999","name":"田静GMKn","hospital_id":480,"hospital_name":"遵义医学院附属口腔医院","department":"大科室JF","major_id":0,"major_name":"","academic_title":"教授","medical_title":"副主任医师","inviter_no":"","inviter_name":"","province":"贵州","city":"遵义","is_verified":"1","date_verified":"2017-09-06 17:32:23","created_at":"2017-09-06 17:32:22","modified_at":"2017-09-06 17:32:25","is_famous":0,"signed_status":"NOT_SIGNED","doctor_card_pictures":[],"doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"PROFESSOR","medical_title_list":"ASSOCIATE_ARCHIATER","city_id":520300,"create_order_time":null,"icon":[],"register_id":9193,"signed_time":null,"order_count":0,"province_id":520000,"user_visible":0,"audit_time":"2017-09-06 17:32:25","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":null,"department_category_name":null,"service_status":0,"staff_id":null,"staff_name":null}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/medicallibrary/doctors/9193
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"id":9193,"register_id":5392,"name":"田静GMKn","mobile":"13492159999","medical_title_list":"ASSOCIATE_ARCHIATER","academic_title_list":"PROFESSOR","hospital_id":480,"user_visible":true,"doctor_visible":true,"created_at":"2017-09-06T09:32:25.000Z","modified_at":"2017-09-06T09:32:25.000Z","city_id":520300,"certified_status":"CERTIFIED","signed_status":"NOT_SIGNED","source_type":"DOCTOR_SERVICE","department_name":"大科室JF","activated_state":true,"hospital_name":"遵义医学院附属口腔医院","city_name":"遵义","department_details_list":[],"disease_list":[],"specialty_list":[],"province_id":520000,"province_name":"贵州","academic_title":"","birthday":""}
+[INFO] ||	 TestCase END:	test_01_已认证医生_同步到医库_新增
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_02_未认证医生_不能同步到医库
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13444759999 ...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13444759999"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] mobile是: 13444759999...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13444759999","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6ImQ0YjE5ZWZmIn0.eyJ1aWQiOiI1MzkzIiwibW9iaWxlIjoiMTM0NDQ3NTk5OTkiLCJleHAiOjE1MDQ3NzY3NDUsImlhdCI6MTUwNDY5MDM0NX0.fcWdOn5lJEeXvBtjwP9iHAqPr-a7lC1rqbwbWB-ZJ3o
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13444759999
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6ImQ0YjE5ZWZmIn0.eyJ1aWQiOiI1MzkzIiwibW9iaWxlIjoiMTM0NDQ3NTk5OTkiLCJleHAiOjE1MDQ3NzY3NDUsImlhdCI6MTUwNDY5MDM0NX0.fcWdOn5lJEeXvBtjwP9iHAqPr-a7lC1rqbwbWB-ZJ3o
+[INFO] doctorId为:	5393
+[INFO] 更新医生信息...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/v1/updatedoctorprofile
+[INFO] 请求数据: >>>>>  {"doctor":{"academic_title_list":"PROFESSOR","department":"大科室rt","doctor_card_pictures":[],"exp_list":[],"hospital_id":"3","medical_title_list":"CHIEF_TECHNICIAN","name":"田静PwUx"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor_id":"5393"}}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor":{"user_id":5393,"mobile":"13444759999","name":"\u7530\u9759PwUx","hospital_id":3,"hospital_name":"\u590d\u65e6\u5927\u5b66\u9644\u5c5e\u5987\u4ea7\u79d1\u533b\u9662","department":"\u5927\u79d1\u5ba4rt","major_id":"","major_name":"","academic_title":"\u6559\u6388","medical_title":"\u4e3b\u4efb\u6280\u5e08","inviter_no":"","inviter_name":"","province":"\u4e0a\u6d77","city":"\u4e0a\u6d77","is_verified":"2","date_verified":"","city_id":310100,"order_count":"","province_id":310000,"academic_title_list":"PROFESSOR","medical_title_list":"CHIEF_TECHNICIAN","register_id":"","exp_list":[],"activated_state":1,"is_required":0,"status_count":{"agentId":{"count":0},"surgeonId":{"count":0}},"AssistantInfo":[]}}}
+[INFO] doctorName为:	田静PwUx
+[INFO] doctorHospitalId为:	3
+[INFO] doctorHospitalName为:	复旦大学附属妇产科医院
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v1/doctors/5393/synchronization
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"单独同步"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	3111080
+[INFO] [ message ]:	注册医生未通过认证
+[INFO] [ data ]:	{}
+[INFO] ||	 TestCase END:	test_02_未认证医生_不能同步到医库
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_03_已认证医生_同步到医库_关联医库ID
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/crm/api/v2/medicallibrary/doctors
+[INFO] 请求数据: >>>>>  {"academic_title_list":"LECTURER","birthday":"1962/01/31","comprehensive_level":3,"cooperation_channel":["WEIBO"],"department_category_id":"85","department_name":"随机科室yB","description":"描述YVZdxBFponZnnlrKQUcxtKuSwZTCSGZPdhynJZJhzoyJdklDPyLHuAUkGyFdlZvbwuKDLrHYSdYWghNAhqRXEMqKsjvPWFUfWAzU","doctor_level":1,"gender":2,"honour":"荣誉JBoDruUJudvtIxJoBIBs","hospital_id":"27528","major_id":"21","medical_title_list":"ARCHIATER","name":"大一WeIM","specialty":"特长urOOFdEthPNQNWSDuCGmYpXhFsAYwQRNUDLboIpQMxsKrAlcKSCZGrPFmkkssDAVZxbwkDTyTBHJzhxwicRdMdkRze","start_year":"1956"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13015219999 ...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13015219999"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] mobile是: 13015219999...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13015219999","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjVhZmM2YTkwIn0.eyJ1aWQiOiI1Mzk0IiwibW9iaWxlIjoiMTMwMTUyMTk5OTkiLCJleHAiOjE1MDQ3NzY3NDgsImlhdCI6MTUwNDY5MDM0OH0.qywPImldVRjjJzFelHOAjIXc-ByQH8bwQhTSlekqBYk
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13015219999
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjVhZmM2YTkwIn0.eyJ1aWQiOiI1Mzk0IiwibW9iaWxlIjoiMTMwMTUyMTk5OTkiLCJleHAiOjE1MDQ3NzY3NDgsImlhdCI6MTUwNDY5MDM0OH0.qywPImldVRjjJzFelHOAjIXc-ByQH8bwQhTSlekqBYk
+[INFO] doctorId为:	5394
+[INFO] 更新医生信息...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/v1/updatedoctorprofile
+[INFO] 请求数据: >>>>>  {"doctor":{"academic_title_list":"LECTURER","department":"大科室mg","doctor_card_pictures":[],"exp_list":[],"hospital_id":"343","medical_title_list":"ARCHIATER","name":"田静mTvF"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor_id":"5394"}}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor":{"user_id":5394,"mobile":"13015219999","name":"\u7530\u9759mTvF","hospital_id":343,"hospital_name":"\u90a2\u53f0\u5e02\u5987\u5e7c\u4fdd\u5065\u9662","department":"\u5927\u79d1\u5ba4mg","major_id":"","major_name":"","academic_title":"\u8bb2\u5e08","medical_title":"\u4e3b\u4efb\u533b\u5e08","inviter_no":"","inviter_name":"","province":"\u6cb3\u5317","city":"\u90a2\u53f0","is_verified":"2","date_verified":"","city_id":130500,"order_count":"","province_id":130000,"academic_title_list":"LECTURER","medical_title_list":"ARCHIATER","register_id":"","exp_list":[],"activated_state":1,"is_required":0,"status_count":{"agentId":{"count":0},"surgeonId":{"count":0}},"AssistantInfo":[]}}}
+[INFO] doctorName为:	田静mTvF
+[INFO] doctorHospitalId为:	343
+[INFO] doctorHospitalName为:	邢台市妇幼保健院
+[INFO] 认证医生...
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v2/doctors/5394/verifications
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"原因"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5394/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v2/doctors/5394/verifications
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"原因"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5394/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] is_verified为:	1
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v1/doctors/5394/synchronization
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"单独同步","expert_id":"9194"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"user_id":5394,"mobile":"13015219999","name":"田静mTvF","hospital_id":343,"hospital_name":"邢台市妇幼保健院","department":"大科室mg","major_id":0,"major_name":"","academic_title":"讲师","medical_title":"主任医师","inviter_no":"","inviter_name":"","province":"河北","city":"邢台","is_verified":"1","date_verified":"2017-09-06 17:32:31","created_at":"2017-09-06 17:32:31","modified_at":"2017-09-06 17:32:33","is_famous":0,"signed_status":"NOT_SIGNED","doctor_card_pictures":"","doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"LECTURER","medical_title_list":"ARCHIATER","city_id":130500,"create_order_time":null,"icon":null,"register_id":9194,"signed_time":null,"order_count":0,"province_id":130000,"user_visible":0,"audit_time":"2017-09-06 17:32:33","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":null,"department_category_name":null,"service_status":0}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5394/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5394,"mobile":"13015219999","name":"田静mTvF","hospital_id":343,"hospital_name":"邢台市妇幼保健院","department":"大科室mg","major_id":0,"major_name":"","academic_title":"讲师","medical_title":"主任医师","inviter_no":"","inviter_name":"","province":"河北","city":"邢台","is_verified":"1","date_verified":"2017-09-06 17:32:31","created_at":"2017-09-06 17:32:31","modified_at":"2017-09-06 17:32:33","is_famous":0,"signed_status":"NOT_SIGNED","doctor_card_pictures":[],"doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"LECTURER","medical_title_list":"ARCHIATER","city_id":130500,"create_order_time":null,"icon":[],"register_id":9194,"signed_time":null,"order_count":0,"province_id":130000,"user_visible":0,"audit_time":"2017-09-06 17:32:33","exp_list":"","audit_state":"AUDIT_PASS","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":null,"department_category_name":null,"service_status":0,"staff_id":null,"staff_name":null}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/medicallibrary/doctors/9194
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"id":9194,"register_id":5394,"name":"田静mTvF","gender":2,"birthday":"1962-01-31","mobile":"13015219999","major_id":21,"medical_title_list":"ARCHIATER","academic_title_list":"LECTURER","hospital_id":343,"description":"描述YVZdxBFponZnnlrKQUcxtKuSwZTCSGZPdhynJZJhzoyJdklDPyLHuAUkGyFdlZvbwuKDLrHYSdYWghNAhqRXEMqKsjvPWFUfWAzU","honour":"荣誉JBoDruUJudvtIxJoBIBs","user_visible":true,"doctor_visible":true,"created_at":"2017-09-06T09:32:29.000Z","modified_at":"2017-09-06T09:32:33.000Z","city_id":130500,"start_year":1956,"specialty":"特长urOOFdEthPNQNWSDuCGmYpXhFsAYwQRNUDLboIpQMxsKrAlcKSCZGrPFmkkssDAVZxbwkDTyTBHJzhxwicRdMdkRze","certified_status":"CERTIFIED","signed_status":"NOT_SIGNED","source_type":"CRM_SYSTEM","department_name":"大科室mg","cooperation_channel":["WEIBO"],"activated_state":true,"doctor_level":1,"comprehensive_level":3,"department_category_id":85,"major":"疝及腹壁外科","parent_major_id":14,"parent_major_name":"外科专业","hospital_name":"邢台市妇幼保健院","city_name":"邢台","department_details_list":[],"disease_list":[],"specialty_list":[],"province_id":130000,"province_name":"河北","department_category_name":"其他","academic_title":""}
+[INFO] ||	 TestCase END:	test_03_已认证医生_同步到医库_关联医库ID
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] ============================================================================================================= 
+[INFO] ||    TestAPI END:	RegisteredDoctor_SyncToKB
+[INFO] ============================================================================================================= 
+

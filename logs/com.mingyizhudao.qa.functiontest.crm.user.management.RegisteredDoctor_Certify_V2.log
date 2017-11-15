@@ -1,0 +1,263 @@
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+[INFO] //    TestAPI START:	RegisteredDoctor_Certify_V2
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_01_认证医生_有效医生ID_失败
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13864729999 ...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13864729999"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] mobile是: 13864729999...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13864729999","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjA4MjU0OWM1In0.eyJ1aWQiOiI1Mzg2IiwibW9iaWxlIjoiMTM4NjQ3Mjk5OTkiLCJleHAiOjE1MDQ3NzY3MTksImlhdCI6MTUwNDY5MDMxOX0.ORWp1ZgwKo1ocmeF23EkM992s_a-mGBYXAQrs35554U
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13864729999
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjA4MjU0OWM1In0.eyJ1aWQiOiI1Mzg2IiwibW9iaWxlIjoiMTM4NjQ3Mjk5OTkiLCJleHAiOjE1MDQ3NzY3MTksImlhdCI6MTUwNDY5MDMxOX0.ORWp1ZgwKo1ocmeF23EkM992s_a-mGBYXAQrs35554U
+[INFO] doctorId为:	5386
+[INFO] 更新医生信息...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/v1/updatedoctorprofile
+[INFO] 请求数据: >>>>>  {"doctor":{"academic_title_list":"LECTURER","department":"大科室GM","doctor_card_pictures":[],"exp_list":[],"hospital_id":"447","medical_title_list":"ATTENDING_PHYSICIAN","name":"田静ibkZ"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor_id":"5386"}}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor":{"user_id":5386,"mobile":"13864729999","name":"\u7530\u9759ibkZ","hospital_id":447,"hospital_name":"\u5b81\u590f\u56de\u65cf\u81ea\u6cbb\u533a\u4eba\u6c11\u533b\u9662","department":"\u5927\u79d1\u5ba4GM","major_id":"","major_name":"","academic_title":"\u8bb2\u5e08","medical_title":"\u4e3b\u6cbb\u533b\u5e08","inviter_no":"","inviter_name":"","province":"\u5b81\u590f","city":"\u94f6\u5ddd","is_verified":"2","date_verified":"","city_id":640100,"order_count":"","province_id":640000,"academic_title_list":"LECTURER","medical_title_list":"ATTENDING_PHYSICIAN","register_id":"","exp_list":[],"activated_state":1,"is_required":0,"status_count":{"agentId":{"count":0},"surgeonId":{"count":0}},"AssistantInfo":[]}}}
+[INFO] doctorName为:	田静ibkZ
+[INFO] doctorHospitalId为:	447
+[INFO] doctorHospitalName为:	宁夏回族自治区人民医院
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5386/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v2/doctors/5386/verifications
+[INFO] 请求数据: >>>>>  {"status":"-1","reason":"失败原因"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"成功","data":{"user_id":5386,"mobile":"13864729999","name":"田静ibkZ","hospital_id":447,"hospital_name":"宁夏回族自治区人民医院","department":"大科室GM","major_id":0,"major_name":"","academic_title":"讲师","medical_title":"主治医师","inviter_no":"","inviter_name":"","province":"宁夏","city":"银川","is_verified":"-1","date_verified":null,"created_at":"2017-09-06 17:32:01","modified_at":"2017-09-06 17:32:02","is_famous":0,"signed_status":"NOT_SIGNED","doctor_card_pictures":"","doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"LECTURER","medical_title_list":"ATTENDING_PHYSICIAN","city_id":640100,"create_order_time":null,"icon":null,"register_id":null,"signed_time":null,"order_count":0,"province_id":640000,"user_visible":0,"audit_time":null,"exp_list":"","audit_state":"AUDIT_NOT","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":null,"department_category_name":null,"service_status":0}}
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5386,"mobile":"13864729999","name":"田静ibkZ","hospital_id":447,"hospital_name":"宁夏回族自治区人民医院","department":"大科室GM","major_id":0,"major_name":"","academic_title":"讲师","medical_title":"主治医师","inviter_no":"","inviter_name":"","province":"宁夏","city":"银川","is_verified":"-1","date_verified":null,"created_at":"2017-09-06 17:32:01","modified_at":"2017-09-06 17:32:02","is_famous":0,"signed_status":"NOT_SIGNED","doctor_card_pictures":"","doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"LECTURER","medical_title_list":"ATTENDING_PHYSICIAN","city_id":640100,"create_order_time":null,"icon":null,"register_id":null,"signed_time":null,"order_count":0,"province_id":640000,"user_visible":0,"audit_time":null,"exp_list":"","audit_state":"AUDIT_NOT","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":null,"department_category_name":null,"service_status":0}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5386/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] ||	 TestCase END:	test_01_认证医生_有效医生ID_失败
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_02_认证医生_有效医生ID_成功
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13636219999 ...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13636219999"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] mobile是: 13636219999...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13636219999","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6ImZiMzNjMjQzIn0.eyJ1aWQiOiI1Mzg3IiwibW9iaWxlIjoiMTM2MzYyMTk5OTkiLCJleHAiOjE1MDQ3NzY3MjMsImlhdCI6MTUwNDY5MDMyM30.6V8RlNkRQ_86sVBMvbsbZ3Aw4W7EpyB6G-bQt6Qo-SE
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13636219999
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6ImZiMzNjMjQzIn0.eyJ1aWQiOiI1Mzg3IiwibW9iaWxlIjoiMTM2MzYyMTk5OTkiLCJleHAiOjE1MDQ3NzY3MjMsImlhdCI6MTUwNDY5MDMyM30.6V8RlNkRQ_86sVBMvbsbZ3Aw4W7EpyB6G-bQt6Qo-SE
+[INFO] doctorId为:	5387
+[INFO] 更新医生信息...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/v1/updatedoctorprofile
+[INFO] 请求数据: >>>>>  {"doctor":{"academic_title_list":"NONE","department":"大科室XZ","doctor_card_pictures":[],"exp_list":[],"hospital_id":"450","medical_title_list":"ATTENDING_PHYSICIAN","name":"田静SlFw"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor_id":"5387"}}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor":{"user_id":5387,"mobile":"13636219999","name":"\u7530\u9759SlFw","hospital_id":450,"hospital_name":"\u6d77\u53e3\u5e02\u4eba\u6c11\u533b\u9662","department":"\u5927\u79d1\u5ba4XZ","major_id":"","major_name":"","academic_title":"\u5176\u4ed6","medical_title":"\u4e3b\u6cbb\u533b\u5e08","inviter_no":"","inviter_name":"","province":"\u6d77\u5357","city":"\u6d77\u53e3","is_verified":"2","date_verified":"","city_id":460100,"order_count":"","province_id":460000,"academic_title_list":"NONE","medical_title_list":"ATTENDING_PHYSICIAN","register_id":"","exp_list":[],"activated_state":1,"is_required":0,"status_count":{"agentId":{"count":0},"surgeonId":{"count":0}},"AssistantInfo":[]}}}
+[INFO] doctorName为:	田静SlFw
+[INFO] doctorHospitalId为:	450
+[INFO] doctorHospitalName为:	海口市人民医院
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5387/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v2/doctors/5387/verifications
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"成功原因"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5387,"mobile":"13636219999","name":"田静SlFw","hospital_id":450,"hospital_name":"海口市人民医院","department":"大科室XZ","major_id":0,"major_name":"","academic_title":"其他","medical_title":"主治医师","inviter_no":"","inviter_name":"","province":"海南","city":"海口","is_verified":"1","date_verified":"2017-09-06 17:32:06","created_at":"2017-09-06 17:32:05","modified_at":"2017-09-06 17:32:06","is_famous":0,"signed_status":"NOT_SIGNED","doctor_card_pictures":"","doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"NONE","medical_title_list":"ATTENDING_PHYSICIAN","city_id":460100,"create_order_time":null,"icon":null,"register_id":null,"signed_time":null,"order_count":0,"province_id":460000,"user_visible":0,"audit_time":null,"exp_list":"","audit_state":"AUDIT_NOT","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":null,"department_category_name":null,"service_status":0}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5387/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] ||	 TestCase END:	test_02_认证医生_有效医生ID_成功
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_03_认证医生_有效医生ID_不填写原因_成功
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13827199999 ...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13827199999"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] mobile是: 13827199999...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13827199999","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjUyMjNiMWVmIn0.eyJ1aWQiOiI1Mzg4IiwibW9iaWxlIjoiMTM4MjcxOTk5OTkiLCJleHAiOjE1MDQ3NzY3MjcsImlhdCI6MTUwNDY5MDMyN30.H91Sjc2Z8DnnFU9XpwkrGT_3WL4Bc2Zs278tVfaYztI
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13827199999
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjUyMjNiMWVmIn0.eyJ1aWQiOiI1Mzg4IiwibW9iaWxlIjoiMTM4MjcxOTk5OTkiLCJleHAiOjE1MDQ3NzY3MjcsImlhdCI6MTUwNDY5MDMyN30.H91Sjc2Z8DnnFU9XpwkrGT_3WL4Bc2Zs278tVfaYztI
+[INFO] doctorId为:	5388
+[INFO] 更新医生信息...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/v1/updatedoctorprofile
+[INFO] 请求数据: >>>>>  {"doctor":{"academic_title_list":"LECTURER","department":"大科室uP","doctor_card_pictures":[],"exp_list":[],"hospital_id":"370","medical_title_list":"RESIDENT_PHYSICIAN","name":"田静QDMM"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor_id":"5388"}}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor":{"user_id":5388,"mobile":"13827199999","name":"\u7530\u9759QDMM","hospital_id":370,"hospital_name":"\u6c88\u9633\u5e02\u7b2c\u56db\u4eba\u6c11\u533b\u9662","department":"\u5927\u79d1\u5ba4uP","major_id":"","major_name":"","academic_title":"\u8bb2\u5e08","medical_title":"\u533b\u5e08\/\u58eb","inviter_no":"","inviter_name":"","province":"\u8fbd\u5b81","city":"\u6c88\u9633","is_verified":"2","date_verified":"","city_id":210100,"order_count":"","province_id":210000,"academic_title_list":"LECTURER","medical_title_list":"RESIDENT_PHYSICIAN","register_id":"","exp_list":[],"activated_state":1,"is_required":0,"status_count":{"agentId":{"count":0},"surgeonId":{"count":0}},"AssistantInfo":[]}}}
+[INFO] doctorName为:	田静QDMM
+[INFO] doctorHospitalId为:	370
+[INFO] doctorHospitalName为:	沈阳市第四人民医院
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5388/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v2/doctors/5388/verifications
+[INFO] 请求数据: >>>>>  {"status":"1","reason":""}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"成功","data":{"user_id":5388,"mobile":"13827199999","name":"田静QDMM","hospital_id":370,"hospital_name":"沈阳市第四人民医院","department":"大科室uP","major_id":0,"major_name":"","academic_title":"讲师","medical_title":"医师\/士","inviter_no":"","inviter_name":"","province":"辽宁","city":"沈阳","is_verified":"1","date_verified":"2017-09-06 17:32:10","created_at":"2017-09-06 17:32:09","modified_at":"2017-09-06 17:32:10","is_famous":0,"signed_status":"NOT_SIGNED","doctor_card_pictures":"","doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"LECTURER","medical_title_list":"RESIDENT_PHYSICIAN","city_id":210100,"create_order_time":null,"icon":null,"register_id":null,"signed_time":null,"order_count":0,"province_id":210000,"user_visible":0,"audit_time":null,"exp_list":"","audit_state":"AUDIT_NOT","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":null,"department_category_name":null,"service_status":0}}
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5388,"mobile":"13827199999","name":"田静QDMM","hospital_id":370,"hospital_name":"沈阳市第四人民医院","department":"大科室uP","major_id":0,"major_name":"","academic_title":"讲师","medical_title":"医师/士","inviter_no":"","inviter_name":"","province":"辽宁","city":"沈阳","is_verified":"1","date_verified":"2017-09-06 17:32:10","created_at":"2017-09-06 17:32:09","modified_at":"2017-09-06 17:32:10","is_famous":0,"signed_status":"NOT_SIGNED","doctor_card_pictures":"","doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"LECTURER","medical_title_list":"RESIDENT_PHYSICIAN","city_id":210100,"create_order_time":null,"icon":null,"register_id":null,"signed_time":null,"order_count":0,"province_id":210000,"user_visible":0,"audit_time":null,"exp_list":"","audit_state":"AUDIT_NOT","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":null,"department_category_name":null,"service_status":0}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/5388/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] ||	 TestCase END:	test_03_认证医生_有效医生ID_不填写原因_成功
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_04_认证医生_无效医生ID
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13652819999 ...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13652819999"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] mobile是: 13652819999...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13652819999","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjY5MzQ4NGU5In0.eyJ1aWQiOiI1Mzg5IiwibW9iaWxlIjoiMTM2NTI4MTk5OTkiLCJleHAiOjE1MDQ3NzY3MzEsImlhdCI6MTUwNDY5MDMzMX0.baUHkc0JH3gwJN0X20aWvPK8-1eM0myMTyZKVHuHXUU
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13652819999
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjY5MzQ4NGU5In0.eyJ1aWQiOiI1Mzg5IiwibW9iaWxlIjoiMTM2NTI4MTk5OTkiLCJleHAiOjE1MDQ3NzY3MzEsImlhdCI6MTUwNDY5MDMzMX0.baUHkc0JH3gwJN0X20aWvPK8-1eM0myMTyZKVHuHXUU
+[INFO] doctorId为:	5389
+[INFO] 更新医生信息...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/v1/updatedoctorprofile
+[INFO] 请求数据: >>>>>  {"doctor":{"academic_title_list":"ASSOCIATE_PROFESSOR","department":"大科室zn","doctor_card_pictures":[],"exp_list":[],"hospital_id":"125","medical_title_list":"ASSOCIATE_CHIEF_TECHNICIAN","name":"田静TKEr"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor_id":"5389"}}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor":{"user_id":5389,"mobile":"13652819999","name":"\u7530\u9759TKEr","hospital_id":125,"hospital_name":"\u821f\u5c71\u533b\u9662","department":"\u5927\u79d1\u5ba4zn","major_id":"","major_name":"","academic_title":"\u526f\u6559\u6388","medical_title":"\u526f\u4e3b\u4efb\u6280\u5e08","inviter_no":"","inviter_name":"","province":"\u6d59\u6c5f","city":"\u821f\u5c71","is_verified":"2","date_verified":"","city_id":330900,"order_count":"","province_id":330000,"academic_title_list":"ASSOCIATE_PROFESSOR","medical_title_list":"ASSOCIATE_CHIEF_TECHNICIAN","register_id":"","exp_list":[],"activated_state":1,"is_required":0,"status_count":{"agentId":{"count":0},"surgeonId":{"count":0}},"AssistantInfo":[]}}}
+[INFO] doctorName为:	田静TKEr
+[INFO] doctorHospitalId为:	125
+[INFO] doctorHospitalName为:	舟山医院
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v2/doctors/15389/verifications
+[INFO] 请求数据: >>>>>  {"status":"-1","reason":"失败原因"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	3110007
+[INFO] [ message ]:	未找到该用户
+[INFO] [ data ]:	{}
+[INFO] ||	 TestCase END:	test_04_认证医生_无效医生ID
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_05_认证医生_认证失败的不能直接认证成功
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13244829999 ...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13244829999"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] mobile是: 13244829999...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13244829999","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjZkMWNhODFjIn0.eyJ1aWQiOiI1MzkwIiwibW9iaWxlIjoiMTMyNDQ4Mjk5OTkiLCJleHAiOjE1MDQ3NzY3MzQsImlhdCI6MTUwNDY5MDMzNH0.2dwFv0kDxr7k58-viBoduFtU6wbz2V9RHAnd8Yx9Cpk
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13244829999
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjZkMWNhODFjIn0.eyJ1aWQiOiI1MzkwIiwibW9iaWxlIjoiMTMyNDQ4Mjk5OTkiLCJleHAiOjE1MDQ3NzY3MzQsImlhdCI6MTUwNDY5MDMzNH0.2dwFv0kDxr7k58-viBoduFtU6wbz2V9RHAnd8Yx9Cpk
+[INFO] doctorId为:	5390
+[INFO] 更新医生信息...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/v1/updatedoctorprofile
+[INFO] 请求数据: >>>>>  {"doctor":{"academic_title_list":"NONE","department":"大科室fP","doctor_card_pictures":[],"exp_list":[],"hospital_id":"139","medical_title_list":"NURSE","name":"田静LXAN"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor_id":"5390"}}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor":{"user_id":5390,"mobile":"13244829999","name":"\u7530\u9759LXAN","hospital_id":139,"hospital_name":"\u4e2d\u5c71\u5927\u5b66\u5149\u534e\u53e3\u8154\u533b\u5b66\u9662\u9644\u5c5e\u53e3\u8154\u533b\u9662","department":"\u5927\u79d1\u5ba4fP","major_id":"","major_name":"","academic_title":"\u5176\u4ed6","medical_title":"\u62a4\u5e08\/\u58eb","inviter_no":"","inviter_name":"","province":"\u5e7f\u4e1c","city":"\u5e7f\u5dde","is_verified":"2","date_verified":"","city_id":440100,"order_count":"","province_id":440000,"academic_title_list":"NONE","medical_title_list":"NURSE","register_id":"","exp_list":[],"activated_state":1,"is_required":0,"status_count":{"agentId":{"count":0},"surgeonId":{"count":0}},"AssistantInfo":[]}}}
+[INFO] doctorName为:	田静LXAN
+[INFO] doctorHospitalId为:	139
+[INFO] doctorHospitalName为:	中山大学光华口腔医学院附属口腔医院
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v2/doctors/5390/verifications
+[INFO] 请求数据: >>>>>  {"status":"-1","reason":"先让你认证不通过"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"user_id":5390,"mobile":"13244829999","name":"田静LXAN","hospital_id":139,"hospital_name":"中山大学光华口腔医学院附属口腔医院","department":"大科室fP","major_id":0,"major_name":"","academic_title":"其他","medical_title":"护师/士","inviter_no":"","inviter_name":"","province":"广东","city":"广州","is_verified":"-1","date_verified":null,"created_at":"2017-09-06 17:32:16","modified_at":"2017-09-06 17:32:17","is_famous":0,"signed_status":"NOT_SIGNED","doctor_card_pictures":"","doctor_card_pictures_deleted":null,"experted_authentication_pictures":null,"experted_authentication_pictures_deleted":null,"academic_title_list":"NONE","medical_title_list":"NURSE","city_id":440100,"create_order_time":null,"icon":null,"register_id":null,"signed_time":null,"order_count":0,"province_id":440000,"user_visible":0,"audit_time":null,"exp_list":"","audit_state":"AUDIT_NOT","activated_state":1,"service_id":null,"service_name":null,"is_test":0,"source_type":1,"department_category_id":null,"department_category_name":null,"service_status":0}
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v2/doctors/5390/verifications
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"再试图让你认证通过"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	3111073
+[INFO] [ message ]:	医生认证状态不正确
+[INFO] [ data ]:	null
+[INFO] ||	 TestCase END:	test_05_认证医生_认证失败的不能直接认证成功
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_06_认证医生_信息不全的不能直接认证成功
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13014009999 ...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13014009999"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] mobile是: 13014009999...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13014009999","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjUyMzJjNjkzIn0.eyJ1aWQiOiI1MzkxIiwibW9iaWxlIjoiMTMwMTQwMDk5OTkiLCJleHAiOjE1MDQ3NzY3MzgsImlhdCI6MTUwNDY5MDMzOH0.pDsofRZyMbQ2VObHj0HG0vRqXl5FFutMVLWA_TSLHt0
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13014009999
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjUyMzJjNjkzIn0.eyJ1aWQiOiI1MzkxIiwibW9iaWxlIjoiMTMwMTQwMDk5OTkiLCJleHAiOjE1MDQ3NzY3MzgsImlhdCI6MTUwNDY5MDMzOH0.pDsofRZyMbQ2VObHj0HG0vRqXl5FFutMVLWA_TSLHt0
+[INFO] doctorId为:	5391
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v2/doctors/5391/verifications
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"试图让你认证通过"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":3111073,"message":"医生认证状态不正确"}
+[INFO] [ code ]:	3111073
+[INFO] [ message ]:	医生认证状态不正确
+[INFO] [ data ]:	null
+[INFO] ||	 TestCase END:	test_06_认证医生_信息不全的不能直接认证成功
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] ============================================================================================================= 
+[INFO] ||    TestAPI END:	RegisteredDoctor_Certify_V2
+[INFO] ============================================================================================================= 
+

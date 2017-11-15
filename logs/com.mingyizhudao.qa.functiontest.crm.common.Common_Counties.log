@@ -1,0 +1,84 @@
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+[INFO] //    TestAPI START:	Common_Counties
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_01_返回城市下区县列表
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/counties?id=330300
+[INFO] 请求数据: >>>>>  id=330300
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"list":[{"id":330302,"city_id":330300,"name":"鹿城区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":330303,"city_id":330300,"name":"龙湾区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":330304,"city_id":330300,"name":"瓯海区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":330305,"city_id":330300,"name":"洞头区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":330324,"city_id":330300,"name":"永嘉县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":330326,"city_id":330300,"name":"平阳县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":330327,"city_id":330300,"name":"苍南县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":330328,"city_id":330300,"name":"文成县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":330329,"city_id":330300,"name":"泰顺县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":330381,"city_id":330300,"name":"瑞安市","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":330382,"city_id":330300,"name":"乐清市","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"}]}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/counties?id=820000
+[INFO] 请求数据: >>>>>  id=820000
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"list":[]}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/counties?id=420100
+[INFO] 请求数据: >>>>>  id=420100
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"list":[{"id":420102,"city_id":420100,"name":"江岸区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":420103,"city_id":420100,"name":"江汉区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":420104,"city_id":420100,"name":"硚口区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":420105,"city_id":420100,"name":"汉阳区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":420106,"city_id":420100,"name":"武昌区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":420107,"city_id":420100,"name":"青山区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":420111,"city_id":420100,"name":"洪山区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":420112,"city_id":420100,"name":"东西湖区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":420113,"city_id":420100,"name":"汉南区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":420114,"city_id":420100,"name":"蔡甸区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":420115,"city_id":420100,"name":"江夏区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":420116,"city_id":420100,"name":"黄陂区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":420117,"city_id":420100,"name":"新洲区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"}]}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/counties?id=150700
+[INFO] 请求数据: >>>>>  id=150700
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"list":[{"id":150702,"city_id":150700,"name":"海拉尔区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":150703,"city_id":150700,"name":"扎赉诺尔区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":150721,"city_id":150700,"name":"阿荣旗","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":150722,"city_id":150700,"name":"莫力达瓦达斡尔族自治旗","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":150723,"city_id":150700,"name":"鄂伦春自治旗","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":150724,"city_id":150700,"name":"鄂温克族自治旗","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":150725,"city_id":150700,"name":"陈巴尔虎旗","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":150726,"city_id":150700,"name":"新巴尔虎左旗","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":150727,"city_id":150700,"name":"新巴尔虎右旗","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":150781,"city_id":150700,"name":"满洲里市","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":150782,"city_id":150700,"name":"牙克石市","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":150783,"city_id":150700,"name":"扎兰屯市","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":150784,"city_id":150700,"name":"额尔古纳市","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":150785,"city_id":150700,"name":"根河市","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"}]}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/counties?id=330200
+[INFO] 请求数据: >>>>>  id=330200
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"list":[{"id":330203,"city_id":330200,"name":"海曙区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":330204,"city_id":330200,"name":"江东区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":330205,"city_id":330200,"name":"江北区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":330206,"city_id":330200,"name":"北仑区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":330211,"city_id":330200,"name":"镇海区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":330212,"city_id":330200,"name":"鄞州区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":330225,"city_id":330200,"name":"象山县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":330226,"city_id":330200,"name":"宁海县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":330281,"city_id":330200,"name":"余姚市","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":330282,"city_id":330200,"name":"慈溪市","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":330283,"city_id":330200,"name":"奉化市","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"}]}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/counties?id=659003
+[INFO] 请求数据: >>>>>  id=659003
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"list":[]}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/counties?id=230500
+[INFO] 请求数据: >>>>>  id=230500
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"list":[{"id":230502,"city_id":230500,"name":"尖山区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":230503,"city_id":230500,"name":"岭东区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":230505,"city_id":230500,"name":"四方台区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":230506,"city_id":230500,"name":"宝山区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":230521,"city_id":230500,"name":"集贤县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":230522,"city_id":230500,"name":"友谊县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":230523,"city_id":230500,"name":"宝清县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":230524,"city_id":230500,"name":"饶河县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"}]}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/counties?id=460100
+[INFO] 请求数据: >>>>>  id=460100
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"list":[{"id":460105,"city_id":460100,"name":"秀英区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":460106,"city_id":460100,"name":"龙华区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":460107,"city_id":460100,"name":"琼山区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":460108,"city_id":460100,"name":"美兰区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"}]}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/counties?id=451200
+[INFO] 请求数据: >>>>>  id=451200
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"list":[{"id":451202,"city_id":451200,"name":"金城江区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":451221,"city_id":451200,"name":"南丹县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":451222,"city_id":451200,"name":"天峨县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":451223,"city_id":451200,"name":"凤山县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":451224,"city_id":451200,"name":"东兰县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":451225,"city_id":451200,"name":"罗城仫佬族自治县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":451226,"city_id":451200,"name":"环江毛南族自治县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":451227,"city_id":451200,"name":"巴马瑶族自治县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":451228,"city_id":451200,"name":"都安瑶族自治县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":451229,"city_id":451200,"name":"大化瑶族自治县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":451281,"city_id":451200,"name":"宜州市","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"}]}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/counties?id=421100
+[INFO] 请求数据: >>>>>  id=421100
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"list":[{"id":421102,"city_id":421100,"name":"黄州区","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":421121,"city_id":421100,"name":"团风县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":421122,"city_id":421100,"name":"红安县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":421123,"city_id":421100,"name":"罗田县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":421124,"city_id":421100,"name":"英山县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":421125,"city_id":421100,"name":"浠水县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":421126,"city_id":421100,"name":"蕲春县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":421127,"city_id":421100,"name":"黄梅县","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":421181,"city_id":421100,"name":"麻城市","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"},{"id":421182,"city_id":421100,"name":"武穴市","created_at":"2017-05-15T16:00:00.000Z","modified_at":"2017-05-15T16:00:00.000Z"}]}
+[INFO] ||	 TestCase END:	test_01_返回城市下区县列表
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_02_确少城市ID字段
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/counties
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	3111048
+[INFO] [ message ]:	城市ID不存在
+[INFO] [ data ]:	null
+[INFO] ||	 TestCase END:	test_02_确少城市ID字段
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] ============================================================================================================= 
+[INFO] ||    TestAPI END:	Common_Counties
+[INFO] ============================================================================================================= 
+

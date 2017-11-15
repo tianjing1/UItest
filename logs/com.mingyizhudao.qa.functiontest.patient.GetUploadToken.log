@@ -1,0 +1,19 @@
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+[INFO] //    TestAPI START:	GetUploadToken
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_01_获取上传token
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/edge-gateway/appointment/api/v2/getUploadToken?fileName=%E6%B5%8B%E8%AF%953.jpg&type=7
+[INFO] 请求数据: >>>>>  fileName=%E6%B5%8B%E8%AF%953.jpg&type=7
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	OK
+[INFO] [ data ]:	{"key":"2017/09/04/5c624709caca44988c25f70215df2f91/测试3.jpg","thumbnailUrl":"https://assets.dev.myzd.info/appointment/2017/09/04/5c624709caca44988c25f70215df2f91/测试3.jpg?imageMogr2/auto-orient/format/jpg/size-limit/204800&e=1504522753&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:rNi9dlM13m5Y-6Mbvl9o4mZETUY=","largeUrl":"https://assets.dev.myzd.info/appointment/2017/09/04/5c624709caca44988c25f70215df2f91/测试3.jpg?imageMogr2/auto-orient/format/jpg/interlace/1&e=1504522753&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:SzoPa268IPJ-8aDZTY0Vt8SBipo=","uploadInfo":{"token":"4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:A4IVNNvWR5ReI5VwMNRO2iIupWM=:eyJzY29wZSI6InRlc3QtZmlsZXM6YXBwb2ludG1lbnQvMjAxNy8wOS8wNC81YzYyNDcwOWNhY2E0NDk4OGMyNWY3MDIxNWRmMmY5MS_mtYvor5UzLmpwZyIsInJldHVybkJvZHkiOiJ7XCJrZXlcIjpcIiQoa2V5KVwiLFwiaGFzaFwiOlwiJChldGFnKVwiLFwiYnVja2V0XCI6XCIkKGJ1Y2tldClcIixcInRodW1ibmFpbFVybFwiOlwiJCh4OnRodW1ibmFpbFVybClcIixcImxhcmdlVXJsXCI6XCIkKHg6bGFyZ2VVcmwpXCJ9IiwiZGVhZGxpbmUiOjE1MDQ1MjYwNTN9","key":"appointment/2017/09/04/5c624709caca44988c25f70215df2f91/测试3.jpg","driver":"qiniu"}}
+[INFO] ||	 TestCase END:	test_01_获取上传token
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] ============================================================================================================= 
+[INFO] ||    TestAPI END:	GetUploadToken
+[INFO] ============================================================================================================= 
+

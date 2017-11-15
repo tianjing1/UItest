@@ -1,0 +1,56 @@
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+[INFO] //    TestAPI START:	GetDiseasesInCategory
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_01_获取疾病_提供有效的categoryId
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13788189999 ...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13788189999"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] mobile是: 13788189999...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13788189999","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjM5MDFmMmJhIn0.eyJ1aWQiOiI0OTIwIiwibW9iaWxlIjoiMTM3ODgxODk5OTkiLCJleHAiOjE1MDQxNDQ3NzQsImlhdCI6MTUwNDA1ODM3NH0.ZOSLKqtndykYPh5FOCf7Japamp6cvcC5VZ2uMylTzak
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13788189999
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjM5MDFmMmJhIn0.eyJ1aWQiOiI0OTIwIiwibW9iaWxlIjoiMTM3ODgxODk5OTkiLCJleHAiOjE1MDQxNDQ3NzQsImlhdCI6MTUwNDA1ODM3NH0.ZOSLKqtndykYPh5FOCf7Japamp6cvcC5VZ2uMylTzak
+[INFO] doctorId为:	4920
+[INFO] 更新医生信息...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/v1/updatedoctorprofile
+[INFO] 请求数据: >>>>>  {"doctor":{"academic_title_list":"LECTURER","department":"大科室vd","doctor_card_pictures":[],"exp_list":[],"hospital_id":"57","inviter_no":"SH0133","major_id":"96","medical_title_list":"ARCHIATER","name":"田静bJlL"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] doctorName为:	田静bJlL
+[INFO] doctorHospitalId为:	57
+[INFO] doctorHospitalName为:	北京大学口腔医院
+[INFO] 认证并同步医生...
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v2/doctors/4920/verificationssynchronization
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"程序认证注册医生并关联到医库","is_signed":"1"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/4920/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] is_verified为:	1
+[INFO] expert_id为:	8780
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/getdiseasesincategory?id=6
+[INFO] 请求数据: >>>>>  id=6
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"diseases":[],"size":0,"page_size":null,"page":null}
+[INFO] diseases的长度为: 0
+[INFO] ||	 TestCase END:	test_01_获取疾病_提供有效的categoryId
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] ============================================================================================================= 
+[INFO] ||    TestAPI END:	GetDiseasesInCategory
+[INFO] ============================================================================================================= 
+

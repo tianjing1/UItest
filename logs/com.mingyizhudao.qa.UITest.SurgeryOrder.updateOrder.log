@@ -1,0 +1,24 @@
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+[INFO] //    TestAPI START:	updateOrder
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_01_修改订单
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/createorder
+[INFO] 请求数据: >>>>>  {"order":{"diagnosis":"qpevCcoPmpKLmIeEUlhzMNFTwLWvwRyDZdvszMiILvSrgWTJKcBMDCwTMYSCbSHvpiezikGURQwKbNcoFDYKiYogEOzSOniUAuSsGjYCfYsJobVdbbCCEXTrJWXxRwVIQzxhvhGJATRgYxLAUBiOmPoJpDUszkICNEeRXWitkxvTHDVJvrbrgCReIEiABpwyxPUrKiJZBrKJFlboFtPJljjstEsAcWkJtXRpkPeLmxVFDSAchpucDIGUgDHQezfgyZCxQlbEkMqYnlzItQAVEkFkpZLJNZKyOKGFHMRmpdWl","expected_doctor_id":"2263","expected_surgery_due_date":"2017-11-08","expected_surgery_hospital_id":"9746","expected_surgery_start_date":"2017-11-07","is_reoperation":0,"major_disease_id":"1573","medical_record_pictures":[{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg","type":"1"},{"key":"2017/05/04/1315bbe0-2836-4776-8216-ec55044f32dd/IMG_20161013_172442.jpg","type":"1"}],"minor_disease_id":"2265","patient_age":53,"patient_gender":1,"patient_name":"王二FTnv","patient_phone":"13037779999"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/crm/api/v1/orders/1030931948/receiveTask
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/orders/1030931948/orderDetail
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] orderNumber:1030931948
+[INFO] 
+[INFO] ||	 TestCase END:	test_01_修改订单
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] ============================================================================================================= 
+[INFO] ||    TestAPI END:	updateOrder
+[INFO] ============================================================================================================= 
+

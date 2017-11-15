@@ -1,0 +1,6 @@
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/6663/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v2/medicallibrary/hospitals/57
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK

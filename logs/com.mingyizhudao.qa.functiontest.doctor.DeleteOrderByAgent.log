@@ -1,0 +1,76 @@
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+[INFO] //    TestAPI START:	DeleteOrderByAgent
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_01_删除订单_下级医生
+[INFO] 创建注册用户...
+[INFO] 请求验证码到手机号13596469999 ...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/sendVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13596469999"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] mobile是: 13596469999...请发送验证码到服务器进行验证
+[INFO] 发送短信验证码到服务器进行验证...
+[INFO] 发送请求: >>>>>  POST http://login.dev.myzd.info/api/login/checkVerifyCode
+[INFO] 请求数据: >>>>>  {"mobile":"13596469999","code":"123456","state":"test"}
+[INFO] 等待回应: <<<<<  200 null
+[INFO] token是: eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjBlOTZjNzhkIn0.eyJ1aWQiOiI2MDU0IiwibW9iaWxlIjoiMTM1OTY0Njk5OTkiLCJleHAiOjE1MDgyOTk2MzUsImlhdCI6MTUwODIxMzIzNX0.nt7KSf_GPrAhCjgv7gDlI3zhvn3sW7g8nIY0BCsFV5c
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] mobile为:	13596469999
+[INFO] token为:	eyJ0eXAiOiJKV1QiLCJzcmMiOiIiLCJhbGciOiJIUzI1NiIsInNpZCI6IjBlOTZjNzhkIn0.eyJ1aWQiOiI2MDU0IiwibW9iaWxlIjoiMTM1OTY0Njk5OTkiLCJleHAiOjE1MDgyOTk2MzUsImlhdCI6MTUwODIxMzIzNX0.nt7KSf_GPrAhCjgv7gDlI3zhvn3sW7g8nIY0BCsFV5c
+[INFO] doctorId为:	6054
+[INFO] 更新医生信息...
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/v1/updatedoctorprofile
+[INFO] 请求数据: >>>>>  {"doctor":{"academic_title_list":"PROFESSOR","department":"大科室Pw","doctor_card_pictures":[],"exp_list":[],"hospital_id":"17951","medical_title_list":"TECHNICIAN","name":"田静JMZh"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor_id":"6054"}}
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/getdoctorprofile
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] {"code":1000000,"message":"\u6210\u529f","data":{"doctor":{"user_id":6054,"mobile":"13596469999","name":"\u7530\u9759JMZh","hospital_id":17951,"hospital_name":"\u9752\u5c9b\u94a2\u94c1\u6709\u9650\u516c\u53f8\u804c\u5de5\u533b\u9662","department":"\u5927\u79d1\u5ba4Pw","major_id":"","major_name":"","academic_title":"\u6559\u6388","medical_title":"\u6280\u5e08\/\u58eb","inviter_no":"","inviter_name":"","province":"\u5c71\u4e1c","city":"\u9752\u5c9b","is_verified":"2","date_verified":"","city_id":370200,"order_count":"","province_id":370000,"academic_title_list":"PROFESSOR","medical_title_list":"TECHNICIAN","register_id":"","exp_list":[],"activated_state":1,"is_required":0,"service_id":null,"service_name":null,"status_count":{"agentId":{"count":0},"surgeonId":{"count":0}},"user_visible":true}}}
+[INFO] doctorName为:	田静JMZh
+[INFO] doctorHospitalId为:	17951
+[INFO] doctorHospitalName为:	青岛钢铁有限公司职工医院
+[INFO] 认证医生...
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v2/doctors/6054/verifications
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"原因"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/6054/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v2/doctors/6054/verifications
+[INFO] 请求数据: >>>>>  {"status":"1","reason":"原因"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/doctors/6054/profiles
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] is_verified为:	1
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/createorder
+[INFO] 请求数据: >>>>>  {"order":{"diagnosis":"BdxzvGSpdfesfUQQkeHJICLZVCsTCxgfsycURiqyCANKxjwsziSDgVpObDqgxqJhSCQqtsYiNgiyYqUIpDsteRSCelfVeFWbbEEMEmzSQExCknHPIWCPrggbiVWqqquTKjWQQReVRrTMqfPsONdkgoDqQeprjiogrkOGzzPeWhHjcZFISmWAqtkIcrmfLtWJxdbFEcllhUZGzTHUTMCqLQIJGLsKRYQEloGlpXZHLqHxPTcEiFhUYNuxCFKSPJOxnzzQmdgXCfuykHyiAlsYiSksgYhGtGlVhnWlZXNXtKyx","expected_doctor_id":"123","expected_surgery_due_date":"2017-10-23","expected_surgery_hospital_id":"679","expected_surgery_start_date":"2017-10-19","is_reoperation":1,"major_disease_id":"1120","medical_record_pictures":[{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg","type":"1"},{"key":"2017/05/04/1315bbe0-2836-4776-8216-ec55044f32dd/IMG_20161013_172442.jpg","type":"1"}],"minor_disease_id":"3835","patient_age":71,"patient_gender":2,"patient_name":"王二UXWt","patient_phone":"13768339999"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/orders?flag=1
+[INFO] 请求数据: >>>>>  flag=1
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 订单数：1
+[INFO] 发送请求: >>>>>  DELETE http://services.dev.myzd.info/doctor/api/orders/1028927125
+[INFO] 请求数据: >>>>>  {"order":{"role":"1"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/orders?flag=1
+[INFO] 请求数据: >>>>>  flag=1
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 订单数：0
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/doctor/api/v1/orders/1028927125?flag=1
+[INFO] 请求数据: >>>>>  flag=1
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"order":{"id":1002,"order_number":1028927125,"type":1,"status":1000,"patient_name":"王二UXWt","patient_age":71,"patient_gender":2,"patient_phone":"13768339999","major_disease_id":1120,"major_disease_name":"环状胰腺","minor_disease_id":3835,"minor_disease_name":"泌尿生殖系损伤","diagnosis":"BdxzvGSpdfesfUQQkeHJICLZVCsTCxgfsycURiqyCANKxjwsziSDgVpObDqgxqJhSCQqtsYiNgiyYqUIpDsteRSCelfVeFWbbEEMEmzSQExCknHPIWCPrggbiVWqqquTKjWQQReVRrTMqfPsONdkgoDqQeprjiogrkOGzzPeWhHjcZFISmWAqtkIcrmfLtWJxdbFEcllhUZGzTHUTMCqLQIJGLsKRYQEloGlpXZHLqHxPTcEiFhUYNuxCFKSPJOxnzzQmdgXCfuykHyiAlsYiSksgYhGtGlVhnWlZXNXtKyx","expected_doctor_id":123,"expected_doctor_name":"李明","expected_surgery_start_date":"2017/10/19","expected_surgery_due_date":"2017/10/23","expected_surgery_hospital_id":679,"expected_surgery_hospital_name":"定远县中医院","is_reoperation":true,"agent_id":6054,"agent_name":"田静JMZh","agent_phone":"13596469999","agent_medical_title":"TECHNICIAN","agent_academic_title":"PROFESSOR","agent_major":"","agent_city_id":370200,"agent_city_name":"青岛","agent_province_id":370000,"agent_province_name":"山东","agent_hospital":"青岛钢铁有限公司职工医院","agent_department":"大科室Pw","agent_contact_id":"","agent_registration_time":"2017-10-17T04:07:17.000Z","agent_deleted_at":"2017-10-17T04:07:22.000+0000","deposit_payment_id":0,"outcome_payment_id":0,"is_test":false,"created_at":"2017/10/17 12:07:21","modified_at":"2017/10/17 12:07:21","medical_record_pictures":[{"url":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg?imageMogr2/auto-orient/format/jpg/size-limit/204800&e=1508213542&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:WuRXvJS8iXqzP33mWS45CMrElfg=","large_url":"https://assets.dev.myzd.info/2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg?imageMogr2/auto-orient/format/jpg/interlace/1&e=1508213542&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:pfAj9fOyQv4nCw8DguB2L6w_rU0=","type":"1","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg"},{"url":"https://assets.dev.myzd.info/2017/05/04/1315bbe0-2836-4776-8216-ec55044f32dd/IMG_20161013_172442.jpg?imageMogr2/auto-orient/format/jpg/size-limit/204800&e=1508213542&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:Ezo7ZrvXxHzMBbcbuDREs2S8hGk=","large_url":"https://assets.dev.myzd.info/2017/05/04/1315bbe0-2836-4776-8216-ec55044f32dd/IMG_20161013_172442.jpg?imageMogr2/auto-orient/format/jpg/interlace/1&e=1508213542&token=4c4YlZcZVO3lqGki56RfXXGfhnxemhbeUXrCoFxO:agHDn2drANj1u99R2hnNe87eJHQ=","type":"1","key":"2017/05/04/1315bbe0-2836-4776-8216-ec55044f32dd/IMG_20161013_172442.jpg"}],"surgeon_recommended_time":"","OrderStatusText":"待处理","surgeon_fee":"","surgeon_id":"","surgeon_name":"","surgeon_medical_title":"","surgeon_academic_title":"","surgeon_hospital":"","surgeon_department":"","NodeList":{"order_number":1028927125,"status":1000,"created_at":"2017-10-17T04:07:21.000Z","called_at":"","canceled_at":"","paid_at":"","recommend_at":"","reviewed_at":"","upload_brief_at":""}}}
+[INFO] ||	 TestCase END:	test_01_删除订单_下级医生
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] ============================================================================================================= 
+[INFO] ||    TestAPI END:	DeleteOrderByAgent
+[INFO] ============================================================================================================= 
+

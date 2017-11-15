@@ -1,0 +1,18 @@
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+[INFO] //    TestAPI START:	VisitRecordCreate
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_01_创建拜访记录
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/bd-assistant/api/v1/visitRecord
+[INFO] 请求数据: >>>>>  {"doctor_attitude":3,"doctor_id":484,"doctor_user_id":389,"doctor_name":"DIub","doctor_hospital_id":"10124","doctor_hospital_name":"xx医院","doctor_department_name":"xx部门","doctor_medical_title":"CHIEF_NURSE","interview_start_time":"2017-10-20T03:54:26.654Z","interview_end_time":"2017-10-19T23:13:00.966Z","location":"xx location","visit_content":"lrwqGvGbNIhEnrFsSLbiYGxJxknjzLGSNpxTIoXgHITRylAgiBUMEPcXcrDbLKTSxvlzFRTekYmpuHIcUjojEgIObqbKFsQURwoV"}
+[INFO] 等待回应: <<<<<  502 Bad Gateway
+[ERROR] 发送请求异常
+[ERROR] NOT a JSON: 	
+[INFO] ||	 TestCase END:	test_01_创建拜访记录
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_02_创建拜访记录_临时医生
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/bd-assistant/api/v1/visitRecord
+[INFO] 请求数据: >>>>>  {"doctor_attitude":1,"doctor_name":"FDWn","doctor_hospital_id":"2066","doctor_hospital_name":"xx医院","doctor_department_name":"xx部门","doctor_medical_title":"ASSOCIATE_ARCHIATER","interview_start_time":"2017-10-19T03:35:58.428Z","interview_end_time":"2017-10-20T05:09:57.492Z","location":"xx location","visit_content":"ksvgOAjdVNJBLJCmgwUFCkLtkdirBltbOZFtnsDowHRcUqVzySrEgQQBtebjAybfwiBTIjzEZnimCnGnKroMoBeRCpMJMVjqLTJG"}

@@ -1,0 +1,60 @@
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+[INFO] //    TestAPI START:	CancelOrder
+[INFO] ///////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_01_取消订单_1000状态
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/createorder
+[INFO] 请求数据: >>>>>  {"order":{"diagnosis":"yoCNnSfNmULpgjALRmpixFFiykMHDQpeMLUsTWIQrJGACQxLiDLCSdleknxGMvOheGCJgIyDWcRzmlhKAUkcLbOvpHHpqnKWZRHwcdypEDLQMMSWcOXkxojVlGNPGXCcnemJKYLBAhCeQUoPqgujCrGojGZdYGTWouCqNbHLPgHSGtDovifXgrvOgCVHdzNnABWXUqiMGIirCQTvkWyYUiRpTHYJvTSYrwcACjDPkEUHEzrKAqBIKOjMhPyAyCcbdXrlwKjLjHnTGroikRgYzmqnBMznUzTfdyQOFZtkLFUw","expected_doctor_id":"1425","expected_surgery_due_date":"2017-10-17","expected_surgery_hospital_id":"17020","expected_surgery_start_date":"2017-10-15","is_reoperation":0,"major_disease_id":"2359","medical_record_pictures":[{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg","type":"1"},{"key":"2017/05/04/1315bbe0-2836-4776-8216-ec55044f32dd/IMG_20161013_172442.jpg","type":"1"}],"minor_disease_id":"2521","patient_age":59,"patient_gender":1,"patient_name":"王二fmrB","patient_phone":"13365139999"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/cancelOrder
+[INFO] 请求数据: >>>>>  {"order":{"orderNumber":"1028522187"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"id":908,"order_number":1028522187,"type":1,"status":9000,"patient_name":"王二fmrB","patient_age":59,"patient_gender":1,"patient_phone":"13365139999","major_disease_id":2359,"major_disease_name":"家族性载脂蛋白B100缺陷症","minor_disease_id":2521,"minor_disease_name":"非结核分枝杆菌性角膜炎","diagnosis":"yoCNnSfNmULpgjALRmpixFFiykMHDQpeMLUsTWIQrJGACQxLiDLCSdleknxGMvOheGCJgIyDWcRzmlhKAUkcLbOvpHHpqnKWZRHwcdypEDLQMMSWcOXkxojVlGNPGXCcnemJKYLBAhCeQUoPqgujCrGojGZdYGTWouCqNbHLPgHSGtDovifXgrvOgCVHdzNnABWXUqiMGIirCQTvkWyYUiRpTHYJvTSYrwcACjDPkEUHEzrKAqBIKOjMhPyAyCcbdXrlwKjLjHnTGroikRgYzmqnBMznUzTfdyQOFZtkLFUw","expected_doctor_id":1425,"expected_doctor_name":"陈刚","expected_surgery_start_date":"2017-10-15","expected_surgery_due_date":"2017-10-17","expected_surgery_hospital_id":17020,"expected_surgery_hospital_name":"青海省第二人民医院","is_reoperation":false,"agent_id":7012,"agent_name":"田静suxi","agent_phone":"13951319999","agent_medical_title":"ASSOCIATE_CHIEF_NURSE","agent_academic_title":"PROFESSOR","agent_major":"","agent_city_id":110100,"agent_city_name":"北京","agent_province_id":110000,"agent_province_name":"北京","agent_hospital":"北京大学口腔医院","agent_department":"大科室Ru","agent_contact_id":"","agent_registration_time":"2017-10-13T10:30:52.000Z","deposit_payment_id":0,"outcome_payment_id":0,"is_test":false,"created_at":"2017-10-13T10:30:57.000Z","modified_at":"2017-10-13T10:30:58.000Z","medical_record_pictures":[{"type":"1","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg"},{"type":"1","key":"2017/05/04/1315bbe0-2836-4776-8216-ec55044f32dd/IMG_20161013_172442.jpg"}]}
+[INFO] ||	 TestCase END:	test_01_取消订单_1000状态
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_02_取消订单_2000状态
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/createorder
+[INFO] 请求数据: >>>>>  {"order":{"diagnosis":"ZbYZdOvlySDNcyyEVkgdTSYNrXsTLoWfXbxmHLSRMzTmiWHncuPtTmLGCiZzRBZhoGsuXAHojmuBwcpFTCUNIGMINPlVbVQDXpORlVsxycwkGyBsQevoRXeofSWtUzgOlndYJFhbRrQEBQuHvQQbZekWydHDWcZdOBxznHboziMVzDikXAskktzSXgLzQXlgqQtloUIcfLvvjvXilqFjdYoqHCjrKfKWuEOhQsbpzjejniZPxVFXAsrnAlTGHvhqEEbPINDuqSHjkHLQHFBFTNClvooGqDHwjOxznVVzHjju","expected_doctor_id":"1342","expected_surgery_due_date":"2017-10-18","expected_surgery_hospital_id":"8627","expected_surgery_start_date":"2017-10-15","is_reoperation":0,"major_disease_id":"629","medical_record_pictures":[{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg","type":"1"},{"key":"2017/05/04/1315bbe0-2836-4776-8216-ec55044f32dd/IMG_20161013_172442.jpg","type":"1"}],"minor_disease_id":"3175","patient_age":10,"patient_gender":2,"patient_name":"王二XuvU","patient_phone":"13498609999"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/crm/api/v1/orders/1028522198/receiveTask
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/orders/1028522198/orderDetail
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/cancelOrder
+[INFO] 请求数据: >>>>>  {"order":{"orderNumber":"1028522198"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] [ code ]:	1000000
+[INFO] [ message ]:	成功
+[INFO] [ data ]:	{"id":909,"order_number":1028522198,"type":1,"status":9000,"patient_name":"王二XuvU","patient_age":10,"patient_gender":2,"patient_phone":"13498609999","major_disease_id":629,"major_disease_name":"大肠脂肪瘤","minor_disease_id":3175,"minor_disease_name":"成釉细胞瘤","diagnosis":"ZbYZdOvlySDNcyyEVkgdTSYNrXsTLoWfXbxmHLSRMzTmiWHncuPtTmLGCiZzRBZhoGsuXAHojmuBwcpFTCUNIGMINPlVbVQDXpORlVsxycwkGyBsQevoRXeofSWtUzgOlndYJFhbRrQEBQuHvQQbZekWydHDWcZdOBxznHboziMVzDikXAskktzSXgLzQXlgqQtloUIcfLvvjvXilqFjdYoqHCjrKfKWuEOhQsbpzjejniZPxVFXAsrnAlTGHvhqEEbPINDuqSHjkHLQHFBFTNClvooGqDHwjOxznVVzHjju","expected_doctor_id":1342,"expected_doctor_name":"易诚青","expected_surgery_start_date":"2017-10-15","expected_surgery_due_date":"2017-10-18","expected_surgery_hospital_id":8627,"expected_surgery_hospital_name":"石首市第二人民医院","is_reoperation":false,"agent_id":7012,"agent_name":"田静suxi","agent_phone":"13951319999","agent_medical_title":"ASSOCIATE_CHIEF_NURSE","agent_academic_title":"PROFESSOR","agent_major":"","agent_city_id":110100,"agent_city_name":"北京","agent_province_id":110000,"agent_province_name":"北京","agent_hospital":"北京大学口腔医院","agent_department":"大科室Ru","agent_contact_id":"","agent_registration_time":"2017-10-13T10:30:52.000Z","major_reps_id":"jing.tian@mingyizhudao.com","major_reps_name":"田静","deposit_payment_id":0,"outcome_payment_id":0,"is_test":false,"created_at":"2017-10-13T10:30:59.000Z","modified_at":"2017-10-13T10:31:00.000Z","medical_record_pictures":[{"type":"1","key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg"},{"type":"1","key":"2017/05/04/1315bbe0-2836-4776-8216-ec55044f32dd/IMG_20161013_172442.jpg"}]}
+[INFO] ||	 TestCase END:	test_02_取消订单_2000状态
+[INFO] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+[INFO] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+[INFO] ||    TestCase START:	test_03_取消订单_2020状态
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/createorder
+[INFO] 请求数据: >>>>>  {"order":{"diagnosis":"tMKUgkLeCZiydpguebtWvsLqkGAMGgZTKYrQpnfpMVBltutxHFPiVJFASwepQlXoiRVEWluGfbPsJgAZpuqlXSVVsXMPivrIiQVLYIKlwOgMVMuWMCiYFxfysUOTGACYGQTBzEFIZNypcMPkmXXxKZzicMEcceElMIpqCzygrDbbjkcyDHSKnzlrCKZoOgNTBRIflVZwQgUxHedKjFubovhOeqweSnNPOhJvlmdydMkNlVWCVivtNSwYPpPSFPyAjnIXlxeRssBnjMQiCGzOHshmrIQsSzcoPdJwDYJhcdGU","expected_doctor_id":"1194","expected_surgery_due_date":"2017-10-21","expected_surgery_hospital_id":"13196","expected_surgery_start_date":"2017-10-15","is_reoperation":1,"major_disease_id":"373","medical_record_pictures":[{"key":"2017/05/04/1265834e-97d8-44a0-95e7-047c7facaee8/IMG_20170429_102737.jpg","type":"1"},{"key":"2017/05/04/1315bbe0-2836-4776-8216-ec55044f32dd/IMG_20161013_172442.jpg","type":"1"}],"minor_disease_id":"1143","patient_age":57,"patient_gender":2,"patient_name":"王二rHTq","patient_phone":"13334339999"}}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/crm/api/v1/orders/1028522205/receiveTask
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/orders/1028522205/orderDetail
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/orders/1028522205/orderDetail
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  PUT http://services.dev.myzd.info/crm/api/v1/orders/1028522205/recommends
+[INFO] 请求数据: >>>>>  {"surgeon_id":"777","content":"自动化推荐的医生"}
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  GET http://services.dev.myzd.info/crm/api/v1/orders/1028522205/orderDetail
+[INFO] 请求数据: >>>>>  
+[INFO] 等待回应: <<<<<  200 OK
+[INFO] 发送请求: >>>>>  POST http://services.dev.myzd.info/doctor/api/cancelOrder
+[INFO] 请求数据: >>>>>  {"order":{"orderNumber":"1028522205"}}

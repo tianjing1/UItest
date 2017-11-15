@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.66 sec <<< FAILURE! - in TestSuite
+test_01_指定医生创建待处理的订单(com.mingyizhudao.qa.functiontest.doctor.CreateDesignatedOrder)  Time elapsed: 0.39 sec  <<< FAILURE!
+net.sf.json.JSONException: null object
+	at com.mingyizhudao.qa.functiontest.doctor.CreateDesignatedOrder.test_01_指定医生创建待处理的订单(CreateDesignatedOrder.java:25)
+
