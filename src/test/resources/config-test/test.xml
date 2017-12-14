@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="doctor" verbose="1" >
+    <test name="doctor" preserve-order="true" >
+
+        <classes>
+            <!--<class name="com.mingyizhudao.qa.utilities.TestUsNg"></class>-->
+            <!--<class name="com.mingyizhudao.qa.UITest.GenericTrading.createIssues"></class>-->
+            <!--<class name="com.mingyizhudao.qa.UITest.GenericTrading.updateIssues"></class>-->
+            <class name="com.mingyizhudao.qa.utilities.TestUsNg"></class>
+            <!--<class name="com.mingyizhudao.qa.UITest.GenericTrading.recommendDoctors"></class>-->
+            <!--<class name="com.mingyizhudao.qa.UITest.GenericTrading.confirmDoctor"></class>-->
+            <!--<class name="com.mingyizhudao.qa.UITest.GenericTrading.createPayLink"></class>-->
+            <!--<class name="com.mingyizhudao.qa.UITest.GenericTrading.bankAccount"></class>-->
+
+        </classes>
+    </test>
+
+</suite>
